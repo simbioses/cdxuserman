@@ -1,6 +1,5 @@
 intall:
-
-  - wget https://github.com/gohugoio/hugo/releases/hugo_0.55.6_Linux-64bit.tar.gz
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_0.55.6_Linux-64bit.tar.gz
   - tar -xzvf hugo_0.55.6_Linux-64bit.tar.gz
 
 script:
@@ -16,7 +15,7 @@ branches:
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: docs
+  local_dir: docs 
   target-branch: master
   on:
     # This will execute the deploy process only on the source branch
