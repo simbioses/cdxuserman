@@ -2,7 +2,6 @@
 title: "Manually linking documents to existing patient demographics"
 date: 2019-06-14T11:37:29-07:00
 weight: 21
-draft: true
 ---
 
 The CDX Viewer shows a warning if the Import Engine failed to automatically match the document to a patient demographic record using the 4-point matching (last name, DOB, sex, HIN).

@@ -2,7 +2,6 @@
 title: "Creating and sending an e-Referral"
 date: 2019-06-14T11:37:29-07:00
 weight: 6
-draft: true
 ---
 
 E-referrals are created in the usual way (like normal “consultations”) . Of course, it is important to select a CDX-capable specialist as the “Consultant”. These specialists are clearly marked in the dropdown box with “(CDX)” (see below):

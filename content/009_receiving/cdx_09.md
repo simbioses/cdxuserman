@@ -2,7 +2,6 @@
 title: "Information shown in Inbox view"
 date: 2019-06-14T11:37:29-07:00
 weight: 12
-draft: true
 ---
 
 
@@ -17,5 +16,5 @@ draft: true
     - completed (marks a final document), or
     - cancelled (marks a document that cancels and earlier one)
 - The “**Ack**” column marks the acknowledgement status of a document.
-- 
+-
 ![](https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558123878547_image.png)

@@ -2,7 +2,6 @@
 title: "Related documents"
 date: 2019-06-14T11:37:29-07:00
 weight: 31
-draft: true
 ---
 
 CDX documents may also be related in ways other than versioning:

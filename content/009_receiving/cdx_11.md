@@ -2,7 +2,6 @@
 title: "Demographic data consistency warning"
 date: 2019-06-14T11:37:29-07:00
 weight: 18
-draft: true
 ---
 
 Even if the CDX Import Engine was able to positively match the patient named in the document with a demographic record in the EMR (using 4 point matching, see above), the Import Engine may alert the user about inconsistencies between the demographic data in the document and in the EMR (see below).

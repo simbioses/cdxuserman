@@ -2,7 +2,6 @@
 title: "Viewing documents with different versions"
 date: 2019-06-14T11:37:29-07:00
 weight: 30
-draft: true
 ---
 
 It is possible to receive different versions of the same logical document. These documents will appear as separate entries in the Inbox. The CDX Viewer alerts the user that different versions are available and whether the user views the most up-to-date version. The user can switch between different versions.

@@ -2,7 +2,6 @@
 title: "Checking the status of an e-Referral and viewing it"
 date: 2019-06-14T11:37:29-07:00
 weight: 9
-draft: true
 ---
 
 
