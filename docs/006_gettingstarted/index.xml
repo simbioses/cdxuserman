@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Getting Started on OSCAR CDX Interoperability User Manual</title>
-    <link>simbioses.github.io/cdxuserman/006_gettingstarted/</link>
+    <link>https://simbioses.github.io/cdxuserman/006_gettingstarted/</link>
     <description>Recent content in Getting Started on OSCAR CDX Interoperability User Manual</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Jun 2019 11:37:29 -0700</lastBuildDate>
     
-	<atom:link href="simbioses.github.io/cdxuserman/006_gettingstarted/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://simbioses.github.io/cdxuserman/006_gettingstarted/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
