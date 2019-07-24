@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/cdxuserman/images/favicon.png" type="image/png">
 
-    <title>Introduction :: OSCAR CDX Interoperability User Manual</title>
+    <title>Demographic data consistency warning :: OSCAR CDX Interoperability User Manual</title>
 
     
     <link href="/cdxuserman/css/nucleus.css?1563937032" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cdxuserman/003_introduction/">
+  <body class="" data-url="/cdxuserman/009_receiving/cdx_11/">
     <nav id="sidebar" class="">
 
 
@@ -78,8 +78,8 @@
   
     
     <li data-nav-id="/cdxuserman/003_introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/cdxuserman/003_introduction/">
@@ -122,7 +122,7 @@
   
     
     <li data-nav-id="/cdxuserman/009_receiving/" title="Receiving" class="dd-item 
-        
+        parent
         
         
         ">
@@ -222,7 +222,7 @@
  
   
     
-      <li data-nav-id="/cdxuserman/009_receiving/cdx_11/" title="Demographic data consistency warning" class="dd-item ">
+      <li data-nav-id="/cdxuserman/009_receiving/cdx_11/" title="Demographic data consistency warning" class="dd-item active">
         <a href="/cdxuserman/009_receiving/cdx_11/">
         Demographic data consistency warning
         
@@ -548,7 +548,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/simbioses/cdxuserman/edit/master/content/003_introduction/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/simbioses/cdxuserman/edit/master/content/009_receiving/cdx_11.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -563,6 +563,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -573,7 +575,13 @@
             
           
           
-            <a href='/cdxuserman/'>Home</a> > Introduction
+            
+            
+          
+          
+            <a href='/cdxuserman/'>Home</a> > <a href='/cdxuserman/009_receiving/'>Receiving</a> > Demographic data consistency warning
+          
+         
           
          
           
@@ -582,6 +590,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -589,32 +604,31 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Demographic data consistency warning
+            </h1>
           
 
         
 
 
 
+<p>Even if the CDX Import Engine was able to positively match the patient named in the document with a demographic record in the EMR (using 4 point matching, see above), the Import Engine may alert the user about inconsistencies between the demographic data in the document and in the EMR (see below).</p>
 
-	
+<p><img src="https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558125081142_image.png" alt="" /></p>
 
-<h1 id="introduction">Introduction</h1>
+<p>The clinician may use this warning as a motivation to review and possibly update the patient demographic record.</p>
 
-<p>The <em>HL7 Clinical Document Architecture (CDA)</em> is a standard to communicate clinical documents electronically between provider systems.</p>
-
-<p>The <em>Provincial Health Services Authority (PHSA)</em> has partnered with other health authorities to establish CDA-based interoperability between clinical information systems, including primary care EMRs. This initiative uses the <em>Clinical Document eXchange (CDX)</em> communication system (<a href="https://bccdx.ca">https://bccdx.ca</a>). The PHSA has worked with EMR vendors to implement CDX-based interoperability.</p>
-
-<p>OSCAR BC has created a first version of OSCAR EMR that is CDX interoperable. This first version is capable of</p>
-
-<ol>
-<li><strong>receiving</strong> and displaying any of the approved types of CDX documents, e.g., eReferrals, Progress Notes, Patient Summaries, Discharge Summaries, General Purpose Notifications, Lab Results, etc.</li>
-<li><strong>sending</strong> eReferral requests to specialists connected to the CDX system.</li>
-</ol>
+<p>Note:</p>
 
 
+<div class="notices info" ><p>The update of demographic data is currently not automated.</p>
+<p>There is currently no way to “dismiss” the warning. It will remain in the Inbox viewer even after the demographic record has been updated. (this will be improved in the next version)</p>
+</p>
+</div>
 
 
 
@@ -622,8 +636,7 @@
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -655,23 +668,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -699,19 +695,6 @@
                     
 
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -719,6 +702,23 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -783,6 +783,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -999,10 +1019,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cdxuserman/" title="Home"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cdxuserman/009_receiving/cdx_10/" title="Viewing and Acknowledging CDX Documents"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cdxuserman/006_gettingstarted/" title="Getting Started" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cdxuserman/009_receiving/cdx_12/" title="Manually linking documents to existing patient demographics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1033,3 +1053,4 @@
 
   </body>
 </html>
+

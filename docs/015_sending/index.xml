@@ -11,5 +11,36 @@
 	<atom:link href="https://simbioses.github.io/cdxuserman/015_sending/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Sending e-Referral Requests</title>
+      <link>https://simbioses.github.io/cdxuserman/015_sending/cdx_19/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/015_sending/cdx_19/</guid>
+      <description>Sending e-Referral Requests ⚠️ The term “referral” is used to align with provincial standard terminology. OSCAR uses the term “consultation”. They can be considered synonymous in the following.
+Adding a CDX capable specialist E-referrals can only be sent to specialists that are connected to the CDX system. The “Add Specialist” UI has been extended to add CDX-capable specialists.
+The new dialogue allows the user to search the CDX provider registry for providers to add to OSCAR.</description>
+    </item>
+    
+    <item>
+      <title>Creating and sending an e-Referral</title>
+      <link>https://simbioses.github.io/cdxuserman/015_sending/cdx_20/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/015_sending/cdx_20/</guid>
+      <description>E-referrals are created in the usual way (like normal “consultations”) . Of course, it is important to select a CDX-capable specialist as the “Consultant”. These specialists are clearly marked in the dropdown box with “(CDX)” (see below):
+Attachments can be added to the e-Referral (see left side of window). Once the data on the referral has been entered completely, the e-referral can be sent using the “Submit and Save CDX e-Referral” button (top right).</description>
+    </item>
+    
+    <item>
+      <title>Checking the status of an e-Referral and viewing it</title>
+      <link>https://simbioses.github.io/cdxuserman/015_sending/cdx_21/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/015_sending/cdx_21/</guid>
+      <description>The user can validate that an e-referral was indeed sent by viewing the left side bar of the e-referral. It mentions the date and time the referral was sent.
+Moreover, the user can view the information that was sent via CDX by clicking on the link.</description>
+    </item>
+    
   </channel>
 </rss>

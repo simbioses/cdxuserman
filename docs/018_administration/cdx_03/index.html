@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/cdxuserman/images/favicon.png" type="image/png">
 
-    <title>Introduction :: OSCAR CDX Interoperability User Manual</title>
+    <title>Configuration :: OSCAR CDX Interoperability User Manual</title>
 
     
     <link href="/cdxuserman/css/nucleus.css?1563937032" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cdxuserman/003_introduction/">
+  <body class="" data-url="/cdxuserman/018_administration/cdx_03/">
     <nav id="sidebar" class="">
 
 
@@ -78,8 +78,8 @@
   
     
     <li data-nav-id="/cdxuserman/003_introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/cdxuserman/003_introduction/">
@@ -455,7 +455,7 @@
   
     
     <li data-nav-id="/cdxuserman/018_administration/" title="Administration" class="dd-item 
-        
+        parent
         
         
         ">
@@ -479,7 +479,7 @@
  
   
     
-      <li data-nav-id="/cdxuserman/018_administration/cdx_03/" title="Configuration" class="dd-item ">
+      <li data-nav-id="/cdxuserman/018_administration/cdx_03/" title="Configuration" class="dd-item active">
         <a href="/cdxuserman/018_administration/cdx_03/">
         Configuration
         
@@ -548,7 +548,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/simbioses/cdxuserman/edit/master/content/003_introduction/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/simbioses/cdxuserman/edit/master/content/018_administration/cdx_03.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -563,6 +563,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -573,7 +575,13 @@
             
           
           
-            <a href='/cdxuserman/'>Home</a> > Introduction
+            
+            
+          
+          
+            <a href='/cdxuserman/'>Home</a> > <a href='/cdxuserman/018_administration/'>Administration</a> > Configuration
+          
+         
           
          
           
@@ -582,6 +590,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -589,41 +604,45 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Configuration
+            </h1>
           
 
         
 
 
 
+<p>You can configure and check the connection with the CDX system in OSCAR’s admin panel. The <strong>CDX Status</strong> tab indicates whether OSCAR is connected with an OBIB.</p>
 
-	
+<blockquote>
+<p>Admin → Integration → Clinical Data eXchange (CDX)</p>
+</blockquote>
 
-<h1 id="introduction">Introduction</h1>
-
-<p>The <em>HL7 Clinical Document Architecture (CDA)</em> is a standard to communicate clinical documents electronically between provider systems.</p>
-
-<p>The <em>Provincial Health Services Authority (PHSA)</em> has partnered with other health authorities to establish CDA-based interoperability between clinical information systems, including primary care EMRs. This initiative uses the <em>Clinical Document eXchange (CDX)</em> communication system (<a href="https://bccdx.ca">https://bccdx.ca</a>). The PHSA has worked with EMR vendors to implement CDX-based interoperability.</p>
-
-<p>OSCAR BC has created a first version of OSCAR EMR that is CDX interoperable. This first version is capable of</p>
-
-<ol>
-<li><strong>receiving</strong> and displaying any of the approved types of CDX documents, e.g., eReferrals, Progress Notes, Patient Summaries, Discharge Summaries, General Purpose Notifications, Lab Results, etc.</li>
-<li><strong>sending</strong> eReferral requests to specialists connected to the CDX system.</li>
-</ol>
+<figure>
+    <img src="/images/image001.png" width="100%"/> <figcaption>
+            <h4>CDX Configuration</h4>
+        </figcaption>
+</figure>
 
 
-
+<ul>
+<li><strong>OBIB URL</strong> specifies the URL of the Oscar Bidirectional Interoperability Bus (OBIB)</li>
+<li><strong>Clinic OID</strong> specifies the ID assigned to the clinic by CDX.</li>
+<li><strong>Automatic Import Enabled/Disabled</strong> specifies whether OSCAR will automatically download new documents.</li>
+<li><strong>Polling Interval</strong> specifies the time interval between automatic downloads (in minutes)</li>
+<li><strong>Save</strong> button makes the settings persistent</li>
+</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -655,23 +674,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -699,6 +701,9 @@
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -711,9 +716,6 @@
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -859,9 +861,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -878,32 +877,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -919,25 +892,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -975,6 +929,75 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -999,10 +1022,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cdxuserman/" title="Home"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cdxuserman/018_administration/" title="Administration"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cdxuserman/006_gettingstarted/" title="Getting Started" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cdxuserman/018_administration/cdx_04/" title="Manual Document Import" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1033,3 +1056,4 @@
 
   </body>
 </html>
+

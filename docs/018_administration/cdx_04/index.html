@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/cdxuserman/images/favicon.png" type="image/png">
 
-    <title>Introduction :: OSCAR CDX Interoperability User Manual</title>
+    <title>Manual Document Import :: OSCAR CDX Interoperability User Manual</title>
 
     
     <link href="/cdxuserman/css/nucleus.css?1563937032" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cdxuserman/003_introduction/">
+  <body class="" data-url="/cdxuserman/018_administration/cdx_04/">
     <nav id="sidebar" class="">
 
 
@@ -78,8 +78,8 @@
   
     
     <li data-nav-id="/cdxuserman/003_introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/cdxuserman/003_introduction/">
@@ -455,7 +455,7 @@
   
     
     <li data-nav-id="/cdxuserman/018_administration/" title="Administration" class="dd-item 
-        
+        parent
         
         
         ">
@@ -498,7 +498,7 @@
  
   
     
-      <li data-nav-id="/cdxuserman/018_administration/cdx_04/" title="Manual Document Import" class="dd-item ">
+      <li data-nav-id="/cdxuserman/018_administration/cdx_04/" title="Manual Document Import" class="dd-item active">
         <a href="/cdxuserman/018_administration/cdx_04/">
         Manual Document Import
         
@@ -548,7 +548,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/simbioses/cdxuserman/edit/master/content/003_introduction/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/simbioses/cdxuserman/edit/master/content/018_administration/cdx_04.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -563,6 +563,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -573,7 +575,13 @@
             
           
           
-            <a href='/cdxuserman/'>Home</a> > Introduction
+            
+            
+          
+          
+            <a href='/cdxuserman/'>Home</a> > <a href='/cdxuserman/018_administration/'>Administration</a> > Manual Document Import
+          
+         
           
          
           
@@ -582,6 +590,21 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#manual-download-of-new-documents">Manual download of “new” documents</a></li>
+<li><a href="#manual-download-of-old-documents">Manual download of “old” documents</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -589,9 +612,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Manual Document Import
+            </h1>
           
 
         
@@ -599,31 +625,51 @@
 
 
 
-	
 
-<h1 id="introduction">Introduction</h1>
+<p>The CDX Admin panel allows administrators to manually download documents from the CDX system.</p>
 
-<p>The <em>HL7 Clinical Document Architecture (CDA)</em> is a standard to communicate clinical documents electronically between provider systems.</p>
 
-<p>The <em>Provincial Health Services Authority (PHSA)</em> has partnered with other health authorities to establish CDA-based interoperability between clinical information systems, including primary care EMRs. This initiative uses the <em>Clinical Document eXchange (CDX)</em> communication system (<a href="https://bccdx.ca">https://bccdx.ca</a>). The PHSA has worked with EMR vendors to implement CDX-based interoperability.</p>
+<div class="notices info" ><p>
+Manual Document download is used only for testing and to recover from errors.
+</p>
+</div>
 
-<p>OSCAR BC has created a first version of OSCAR EMR that is CDX interoperable. This first version is capable of</p>
+
+<h2 id="manual-download-of-new-documents">Manual download of “new” documents</h2>
+
+<p>The CDX document distribution system considers documents as “new”, if and only if they have not yet been downloaded from the CDX system.</p>
+
+<p>OSCAR EMR can be configured to download “new” documents automatically. Hence, manual download of “new” documents is not needed during normal operations. However, it may be useful for testing purposes.</p>
+
+<p>The Admin panel indicates the number of “new” documents waiting for a clinic. They can be downloaded manually using the <code>import</code> button (only visible if “new” documents are available).</p>
+
+<p><img src="https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558051017883_image.png" alt="" /></p>
+
+<h2 id="manual-download-of-old-documents">Manual download of “old” documents</h2>
+
+<p>The CDX document distribution system considers documents as “old” if the EMR system has downloaded them already. Still, the CDX system retains downloaded documents for an unspecified time, so that they can be downloaded again.</p>
+
+<p><em>Why import a document that has already been downloaded?</em></p>
+
+<p>This should be necessary only in two types of (exceptional) cases:</p>
 
 <ol>
-<li><strong>receiving</strong> and displaying any of the approved types of CDX documents, e.g., eReferrals, Progress Notes, Patient Summaries, Discharge Summaries, General Purpose Notifications, Lab Results, etc.</li>
-<li><strong>sending</strong> eReferral requests to specialists connected to the CDX system.</li>
+<li><strong>Import Errors</strong>. If an error occurred during document import, the document is considered delivered (“old”) from the perspective of the CDX system. However, the document has not successfully been imported by the EMR. Once the problem has been diagnosed and fixed, the admin can use the CDX Admin panel to download the document(s) that could not be imported before (see below).</li>
+<li><strong>Undo Document Deletion</strong>. EMR users have the ability to delete imported documents if they are convinced that the document was delivered in error. The CDX Admin panel allows a user to effectively undo such a manual deletion if it turns out that the document was deleted in error (see below).</li>
 </ol>
 
+<p>The CDX Admin panel has a table showing those documents available from the CDX system that are not currently imported in the EMR. They can selectively be imported.</p>
 
+<p>The figure below shows the CDX Admin panel indicating that there was one unsuccessful download and one document that was deleted. The user selected the unsuccessful download and can press the “*Import selected documents*” button to reattempt the import.</p>
 
+<p><img src="https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558054982778_image.png" alt="" /></p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -655,23 +701,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -699,6 +728,9 @@
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -711,9 +743,6 @@
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -859,9 +888,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -878,32 +904,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -919,25 +919,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -975,6 +956,75 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -999,10 +1049,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cdxuserman/" title="Home"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cdxuserman/018_administration/cdx_03/" title="Configuration"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cdxuserman/006_gettingstarted/" title="Getting Started" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cdxuserman/018_administration/cdx_03/" title="Configuration" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1033,3 +1083,4 @@
 
   </body>
 </html>
+

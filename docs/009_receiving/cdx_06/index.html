@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/cdxuserman/images/favicon.png" type="image/png">
 
-    <title>Introduction :: OSCAR CDX Interoperability User Manual</title>
+    <title>Routing to the Inbox :: OSCAR CDX Interoperability User Manual</title>
 
     
     <link href="/cdxuserman/css/nucleus.css?1563937032" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/cdxuserman/003_introduction/">
+  <body class="" data-url="/cdxuserman/009_receiving/cdx_06/">
     <nav id="sidebar" class="">
 
 
@@ -78,8 +78,8 @@
   
     
     <li data-nav-id="/cdxuserman/003_introduction/" title="Introduction" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/cdxuserman/003_introduction/">
@@ -122,7 +122,7 @@
   
     
     <li data-nav-id="/cdxuserman/009_receiving/" title="Receiving" class="dd-item 
-        
+        parent
         
         
         ">
@@ -146,7 +146,7 @@
  
   
     
-      <li data-nav-id="/cdxuserman/009_receiving/cdx_06/" title="Routing to the Inbox" class="dd-item ">
+      <li data-nav-id="/cdxuserman/009_receiving/cdx_06/" title="Routing to the Inbox" class="dd-item active">
         <a href="/cdxuserman/009_receiving/cdx_06/">
         Routing to the Inbox
         
@@ -548,7 +548,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/simbioses/cdxuserman/edit/master/content/003_introduction/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/simbioses/cdxuserman/edit/master/content/009_receiving/cdx_06.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -563,6 +563,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -573,7 +575,13 @@
             
           
           
-            <a href='/cdxuserman/'>Home</a> > Introduction
+            
+            
+          
+          
+            <a href='/cdxuserman/'>Home</a> > <a href='/cdxuserman/009_receiving/'>Receiving</a> > Routing to the Inbox
+          
+         
           
          
           
@@ -582,6 +590,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -589,41 +604,40 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Routing to the Inbox
+            </h1>
           
 
         
 
 
 
+<p>CDX documents may identify several <em>primary and secondary recipients</em> (roughly analogous to the “To:” and “Cc:” fields in email.) CDX documents may also not specify any recipient provider - but just a recipient clinic.</p>
 
-	
-
-<h1 id="introduction">Introduction</h1>
-
-<p>The <em>HL7 Clinical Document Architecture (CDA)</em> is a standard to communicate clinical documents electronically between provider systems.</p>
-
-<p>The <em>Provincial Health Services Authority (PHSA)</em> has partnered with other health authorities to establish CDA-based interoperability between clinical information systems, including primary care EMRs. This initiative uses the <em>Clinical Document eXchange (CDX)</em> communication system (<a href="https://bccdx.ca">https://bccdx.ca</a>). The PHSA has worked with EMR vendors to implement CDX-based interoperability.</p>
-
-<p>OSCAR BC has created a first version of OSCAR EMR that is CDX interoperable. This first version is capable of</p>
+<p>OSCAR’s CDX import engine uses the following logic to route incoming CDX documents to provider inboxes:</p>
 
 <ol>
-<li><strong>receiving</strong> and displaying any of the approved types of CDX documents, e.g., eReferrals, Progress Notes, Patient Summaries, Discharge Summaries, General Purpose Notifications, Lab Results, etc.</li>
-<li><strong>sending</strong> eReferral requests to specialists connected to the CDX system.</li>
+<li>(Step 1) route the document to the Inbox of any provider with the same MSP number as any of the recipients named in the document.</li>
+<li>(Step 2) if Step 1 did not result in any provider matches <em>and</em> if the patient named in the document could be matched to a demographic record in the EMR <em>then</em> route the document to the most responsible provider (MRP) of the matched patient (if available).</li>
+<li>(Step 3) if Steps 1 and 2 did not result in any provider matches, the document is considered “<em>unclaimed</em>&rdquo; and can be retrieved by searching for “unclaimed” documents in the Inbox.</li>
 </ol>
 
+<p><img src="https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558112387277_image.png" alt="Click “Search” to find unclaimed documents" /></p>
 
+<p><img src="https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558112257391_image.png" alt="" /></p>
 
+<p><img src="https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558114144052_image.png" alt="Example search result showing an “unclaimed” document" /></p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -655,23 +669,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -699,10 +696,28 @@
                     
 
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -719,6 +734,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -999,10 +1017,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cdxuserman/" title="Home"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cdxuserman/009_receiving/" title="Receiving"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/cdxuserman/006_gettingstarted/" title="Getting Started" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cdxuserman/009_receiving/cdx_08/" title="Associating incoming documents with patients" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1033,3 +1051,4 @@
 
   </body>
 </html>
+

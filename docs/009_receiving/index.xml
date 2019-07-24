@@ -11,5 +11,100 @@
 	<atom:link href="https://simbioses.github.io/cdxuserman/009_receiving/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Routing to the Inbox</title>
+      <link>https://simbioses.github.io/cdxuserman/009_receiving/cdx_06/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/009_receiving/cdx_06/</guid>
+      <description>CDX documents may identify several primary and secondary recipients (roughly analogous to the “To:” and “Cc:” fields in email.) CDX documents may also not specify any recipient provider - but just a recipient clinic.
+OSCAR’s CDX import engine uses the following logic to route incoming CDX documents to provider inboxes:
+ (Step 1) route the document to the Inbox of any provider with the same MSP number as any of the recipients named in the document.</description>
+    </item>
+    
+    <item>
+      <title>Associating incoming documents with patients</title>
+      <link>https://simbioses.github.io/cdxuserman/009_receiving/cdx_08/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/009_receiving/cdx_08/</guid>
+      <description>The CDX import engine attempts to automatically match incoming documents to patient demographic records in the EMR. This is done using 4-point matching as follows:
+ - last name - gender - health number - gender  Documents for which the above 4-point match fails are shown as “not assigned” in the Inbox view (see above).</description>
+    </item>
+    
+    <item>
+      <title>Information shown in Inbox view</title>
+      <link>https://simbioses.github.io/cdxuserman/009_receiving/cdx_09/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/009_receiving/cdx_09/</guid>
+      <description>Similar to other documents and labs, the Inbox shows patient name, number and gender. Result status is not currently shown.  (⚠️ if the CDX document is a lab result, the result status is NOT displayed in the Inbox view. Consequently, the colour is NOT changed to red for an abnormal result.)  The “Date of Test” column shows the Observation Date, followed by the time the document was authored (Authoring Date).</description>
+    </item>
+    
+    <item>
+      <title>Viewing and Acknowledging CDX Documents</title>
+      <link>https://simbioses.github.io/cdxuserman/009_receiving/cdx_10/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/009_receiving/cdx_10/</guid>
+      <description>As with other Inbox items, clicking on a CDX Document will open up a viewer window that shows the content of the document, including potential attachments (e.g., PDF documents, images, etc.). The CDX Document Viewer provides the familiar functionality of acknowledging a document, flagging / messaging other providers, etc. (see below).</description>
+    </item>
+    
+    <item>
+      <title>Demographic data consistency warning</title>
+      <link>https://simbioses.github.io/cdxuserman/009_receiving/cdx_11/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/009_receiving/cdx_11/</guid>
+      <description>Even if the CDX Import Engine was able to positively match the patient named in the document with a demographic record in the EMR (using 4 point matching, see above), the Import Engine may alert the user about inconsistencies between the demographic data in the document and in the EMR (see below).
+The clinician may use this warning as a motivation to review and possibly update the patient demographic record.</description>
+    </item>
+    
+    <item>
+      <title>Manually linking documents to existing patient demographics</title>
+      <link>https://simbioses.github.io/cdxuserman/009_receiving/cdx_12/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/009_receiving/cdx_12/</guid>
+      <description>The CDX Viewer shows a warning if the Import Engine failed to automatically match the document to a patient demographic record using the 4-point matching (last name, DOB, sex, HIN). In this case, the user can manually search the EMR demographic records and link the document to a patient (see “Demographic Search” input and “Link” button below).</description>
+    </item>
+    
+    <item>
+      <title>Creating a new Demographic</title>
+      <link>https://simbioses.github.io/cdxuserman/009_receiving/cdx_13/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/009_receiving/cdx_13/</guid>
+      <description>If the CDX document refers to a new patient (i.e., a patient that does not have a demographic record in the EMR), the user can create a new Demographic Record based on the information provided in the CDX document (see “New” button”). The CDX Document will be linked automatically to this newly created Demographic record.</description>
+    </item>
+    
+    <item>
+      <title>Deleting a CDX Document that was received in error</title>
+      <link>https://simbioses.github.io/cdxuserman/009_receiving/cdx_14/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/009_receiving/cdx_14/</guid>
+      <description>Finally, the user may delete a CDX document that was received in error, e.g., if the patient named on the document is not (and will not be) a client of the clinic. (see “Delete” button) Note: Documents that were deleted in error can be restored by an Admin (see Administration above).</description>
+    </item>
+    
+    <item>
+      <title>Viewing documents with different versions</title>
+      <link>https://simbioses.github.io/cdxuserman/009_receiving/cdx_15/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/009_receiving/cdx_15/</guid>
+      <description>It is possible to receive different versions of the same logical document. These documents will appear as separate entries in the Inbox. The CDX Viewer alerts the user that different versions are available and whether the user views the most up-to-date version. The user can switch between different versions.</description>
+    </item>
+    
+    <item>
+      <title>Related documents</title>
+      <link>https://simbioses.github.io/cdxuserman/009_receiving/cdx_16/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/009_receiving/cdx_16/</guid>
+      <description>CDX documents may also be related in ways other than versioning:
+ a document may have a “parent document” documents may belong to the same “set of documents” a document may have been sent “in fulfillment of” another document (e.g., a consult not document may have been sent in fulfillment of an referral request document)  Any related CDX documents are displayed at the bottom of the CDX Viewer window:</description>
+    </item>
+    
   </channel>
 </rss>
