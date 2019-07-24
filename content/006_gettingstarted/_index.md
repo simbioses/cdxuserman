@@ -11,7 +11,7 @@ The CDX systems needs to be connected to exchange data. You can check this in th
 
 > Admin → Integration → Clinical Data eXchange (CDX)
 
-{{< figure title="CDX Configuration" src="{{.Site.BaseURL}}/images/image001.png" width="100%">}}
+{{< figure title="CDX Configuration" src="/images/image001.png" width="100%">}}
 
 The **CDX Status** tab indicates whether OSCAR is connected with an OBIB.
 
