@@ -19,5 +19,4 @@ deploy:
   github_token: $GH_TOKEN
   target-branch: master
   on:
-    # This will execute the deploy process only on the source branch
-    branch: master
+    branch: src
