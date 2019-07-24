@@ -1,4 +1,5 @@
-baseURL = "https://simbioses.github.io/cdxuserman/"
+#baseURL = "https://simbioses.github.io/cdxuserman/"
+baseURL = ""
 languageCode = "en-us"
 title = "OSCAR CDX Interoperability User Manual"
 theme= "hugo-theme-learn"
@@ -7,7 +8,7 @@ enableEmoji = true
 
 publishDir = "docs"
 
-relativeURLs = true
+relativeURLs = false
 
 [params]
   # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
