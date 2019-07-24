@@ -1,62 +1,62 @@
 [
 {
-	"uri": "https://simbioses.github.io/cdxuserman/003_introduction/",
+	"uri": "simbioses.github.io/cdxuserman/003_introduction/",
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
 	"content": " Introduction The HL7 Clinical Document Architecture (CDA) is a standard to communicate clinical documents electronically between provider systems.\nThe Provincial Health Services Authority (PHSA) has partnered with other health authorities to establish CDA-based interoperability between clinical information systems, including primary care EMRs. This initiative uses the Clinical Document eXchange (CDX) communication system (https://bccdx.ca). The PHSA has worked with EMR vendors to implement CDX-based interoperability.\nOSCAR BC has created a first version of OSCAR EMR that is CDX interoperable. This first version is capable of\n receiving and displaying any of the approved types of CDX documents, e.g., eReferrals, Progress Notes, Patient Summaries, Discharge Summaries, General Purpose Notifications, Lab Results, etc. sending eReferral requests to specialists connected to the CDX system.  "
 },
 {
-	"uri": "https://simbioses.github.io/cdxuserman/006_gettingstarted/",
+	"uri": "simbioses.github.io/cdxuserman/006_gettingstarted/",
 	"title": "Getting Started",
 	"tags": [],
 	"description": "",
 	"content": " Getting Started The CDX systems needs to be connected to exchange data. You can check this in the CDX user interface in OSCAR\u0026rsquo;s Admin panel.\n Admin → Integration → Clinical Data eXchange (CDX)\n   CDX Configuration   The CDX Status tab indicates whether OSCAR is connected with an OBIB.\nIf the CDX Status tab indicates The OBIB is not connected, please contact your OSCAR Service Provider.\nOSPs and administrators can find detailed steps about how to connect the OBIB in the Administration chapter of this user manual.\n"
 },
 {
-	"uri": "https://simbioses.github.io/cdxuserman/009_receiving/",
+	"uri": "simbioses.github.io/cdxuserman/009_receiving/",
 	"title": "Receiving",
 	"tags": [],
 	"description": "",
 	"content": " Receiving and Routing OSCAR BC has created a first version of OSCAR EMR that is CDX interoperable. This first version is capable of\n receiving and displaying any of the approved types of CDX documents, e.g., eReferrals, Progress Notes, Patient Summaries, Discharge Summaries, General Purpose Notifications, Lab Results, etc. sending eReferral requests to specialists connected to the CDX system.  In this chaper we walk you through the detailed steps of receiving and sending CDX documents.\n"
 },
 {
-	"uri": "https://simbioses.github.io/cdxuserman/012_chart/",
+	"uri": "simbioses.github.io/cdxuserman/012_chart/",
 	"title": "Patient’s eChart",
 	"tags": [],
 	"description": "",
 	"content": " CDX Documents as part of a Patient’s eChart CDX documents appear under “Documents” in the patient’s eChart. For example, the General Lab Report, History \u0026amp; Physical Note, and Consult Note documents in the chart below are CDX documents:\nNote: in future versions of the CDX integration, Oscar may “sort” CDX document types more appropriately, e.g., lab results under “Lab Results” and consultation notes under “Consultations”.\nDocuments can be viewed by clicking on them.\n"
 },
 {
-	"uri": "https://simbioses.github.io/cdxuserman/015_sending/",
+	"uri": "simbioses.github.io/cdxuserman/015_sending/",
 	"title": "Sending",
 	"tags": [],
 	"description": "",
 	"content": " Sending CDX documents The current OSCAR version can send only one type of CDX documents, namely e-Referral requests. Other types of CDX documents will be supported in the future.\n"
 },
 {
-	"uri": "https://simbioses.github.io/cdxuserman/018_administration/",
+	"uri": "simbioses.github.io/cdxuserman/018_administration/",
 	"title": "Administration",
 	"tags": [],
 	"description": "",
 	"content": " Administration  The contents of this section is mainly for admin users and OSCR Service Providers.  "
 },
 {
-	"uri": "https://simbioses.github.io/cdxuserman/categories/",
+	"uri": "simbioses.github.io/cdxuserman/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://simbioses.github.io/cdxuserman/",
+	"uri": "simbioses.github.io/cdxuserman/",
 	"title": "Home",
 	"tags": [],
 	"description": "",
 	"content": " OSCAR CDX Interoperability User Manual Welcome to the OSCAR CDX Interoperability User Manual. This document describes the functionality added to OSCAR for its Version 1 of Clinical Document eXchange (CDX) interoperability. There are of course several places where the existing implementation can be improved. Such improvements will be shipped in future versions of the software.\n"
 },
 {
-	"uri": "https://simbioses.github.io/cdxuserman/tags/",
+	"uri": "simbioses.github.io/cdxuserman/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",
