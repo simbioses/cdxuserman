@@ -5,7 +5,6 @@ theme= "hugo-theme-learn"
 # enable emojis
 enableEmoji = true
 
-
 publishDir = "docs"
 
 
