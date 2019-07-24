@@ -18,7 +18,7 @@
 	"title": "Receiving",
 	"tags": [],
 	"description": "",
-	"content": " Receiving and Routing OSCAR BC has created a first version of OSCAR EMR that is CDX interoperable. This first version is capable of\n receiving and displaying any of the approved types of CDX documents, e.g., eReferrals, Progress Notes, Patient Summaries, Discharge Summaries, General Purpose Notifications, Lab Results, etc. sending eReferral requests to specialists connected to the CDX system.  In this chaper we walk you through the detailed steps of receiving and sending CDX documents.\n"
+	"content": " Receiving and Routing OSCAR BC has created a first version of OSCAR EMR that is CDX interoperable. This first version is capable of\n receiving and displaying any of the approved types of CDX documents, e.g., eReferrals, Progress Notes, Patient Summaries, Discharge Summaries, General Purpose Notifications, Lab Results, etc. sending eReferral requests to specialists connected to the CDX system.  In this chapter we walk you through the detailed steps of receiving and sending CDX documents.\n"
 },
 {
 	"uri": "https://simbioses.github.io/cdxuserman/012_chart/",

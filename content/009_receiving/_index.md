@@ -13,4 +13,4 @@ OSCAR BC has created a first version of OSCAR EMR that is CDX interoperable. Thi
 1. **receiving** and displaying any of the approved types of CDX documents, e.g., eReferrals, Progress Notes, Patient Summaries, Discharge Summaries, General Purpose Notifications, Lab Results, etc.
 2. **sending** eReferral requests to specialists connected to the CDX system.
 
-In this chaper we walk you through the detailed steps of receiving and sending CDX documents.
+In this chapter we walk you through the detailed steps of receiving and sending CDX documents.
