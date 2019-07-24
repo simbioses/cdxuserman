@@ -7,10 +7,10 @@ script:
   # Execute the hugo build
   - ./hugo
 
-addons
-  apt:
-    packages:
-      - python-pygments
+branches:
+  # I chose to build all branches aside from the master branch
+  except:
+    - master
 
 # Deploy to GitHub pages
 deploy:
