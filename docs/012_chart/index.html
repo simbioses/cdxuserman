@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="description" content="OSCAR CDX Interoperability User Manual">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Patient’s eChart :: OSCAR CDX Interoperability User Manual</title>
+
+    
+    <link href="/css/nucleus.css?1563927964" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1563927964" rel="stylesheet">
+    <link href="/css/hybrid.css?1563927964" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1563927964" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1563927964" rel="stylesheet">
+    <link href="/css/auto-complete.css?1563927964" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1563927964" rel="stylesheet">
+    <link href="/css/theme.css?1563927964" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1563927964" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1563927964" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1563927964"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/012_chart/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+  <img src="/images/layout/oscarcdxlogo.png">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1563927964"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1563927964"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1563927964"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/003_introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/003_introduction/">
+          Introduction
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/006_gettingstarted/" title="Getting Started" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/006_gettingstarted/">
+          Getting Started
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/009_receiving/" title="Receiving" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/009_receiving/">
+          Receiving
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/012_chart/" title="Patient’s eChart" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/012_chart/">
+          Patient’s eChart
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/015_sending/" title="Sending" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/015_sending/">
+          Sending
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/018_administration/" title="Administration" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/018_administration/">
+          Administration
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p> Last Updated: January 1, 0001 @ 00:00 UTC</p></br>
+<p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/awbaer/oscarcdxman/edit/master/content/012_chart/_index.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'>Home</a> > Patient’s eChart
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+          <div id="chapter">
+        
+        <div id="body-inner">
+          
+
+        
+
+
+
+
+	
+
+<h1 id="cdx-documents-as-part-of-a-patient-s-echart">CDX Documents as part of a Patient’s eChart</h1>
+
+<p>CDX documents appear under “Documents” in the patient’s eChart. For example, the General Lab Report, History &amp; Physical Note, and Consult Note documents in the chart below are CDX documents:</p>
+
+<p><img src="https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558131674577_image.png" alt="" /></p>
+
+<p>Note: in future versions of the CDX integration, Oscar may “sort” CDX document types more appropriately, e.g., lab results under “Lab Results” and consultation notes under “Consultations”.</p>
+
+<p>Documents can be viewed by clicking on them.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+            </div> 
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/009_receiving/" title="Receiving"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/015_sending/" title="Sending" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1563927964"></script>
+    <script src="/js/perfect-scrollbar.min.js?1563927964"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1563927964"></script>
+    <script src="/js/jquery.sticky.js?1563927964"></script>
+    <script src="/js/featherlight.min.js?1563927964"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1563927964"></script>
+    <script src="/js/highlight.pack.js?1563927964"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1563927964"></script>
+    <script src="/js/learn.js?1563927964"></script>
+    <script src="/js/hugo-learn.js?1563927964"></script>
+
+    <link href="/mermaid/mermaid.css?1563927964" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1563927964"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on OSCAR CDX Interoperability User Manual</title>
+    <link>/006_gettingstarted/</link>
+    <description>Recent content in Getting Started on OSCAR CDX Interoperability User Manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2019 11:37:29 -0700</lastBuildDate>
+    
+	<atom:link href="/006_gettingstarted/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/003_introduction/</loc>
+    <lastmod>2019-06-14T11:37:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/006_gettingstarted/</loc>
+    <lastmod>2019-06-14T11:37:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/009_receiving/</loc>
+    <lastmod>2019-06-14T11:37:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/012_chart/</loc>
+    <lastmod>2019-06-14T11:37:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/015_sending/</loc>
+    <lastmod>2019-06-14T11:37:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/018_administration/</loc>
+    <lastmod>2019-06-14T11:37:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
