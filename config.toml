@@ -1,4 +1,4 @@
-baseURL = "/cdxuserman/"
+baseURL = ""
 languageCode = "en-us"
 title = "OSCAR CDX Interoperability User Manual"
 theme= "hugo-theme-learn"
