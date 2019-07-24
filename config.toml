@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://simbioses.github.io/cdxuserman/"
 languageCode = "en-us"
 title = "OSCAR CDX Interoperability User Manual"
 theme= "hugo-theme-learn"

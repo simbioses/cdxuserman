@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Patient’s eChart on OSCAR CDX Interoperability User Manual</title>
-    <link>/012_chart/</link>
+    <link>https://simbioses.github.io/cdxuserman/012_chart/</link>
     <description>Recent content in Patient’s eChart on OSCAR CDX Interoperability User Manual</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Jun 2019 11:37:29 -0700</lastBuildDate>
     
-	<atom:link href="/012_chart/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://simbioses.github.io/cdxuserman/012_chart/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
