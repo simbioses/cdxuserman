@@ -1,21 +1,23 @@
-# Install the apt prerequisites
-addons:
+intall:
+
+  - wget https://github.com/gohugoio/hugo/releases/hugo_0.55.6_Linux-64bit.tar.gz
+  - tar -xzvf hugo_0.55.6_Linux-64bit.tar.gz
+
+script:
+  # Execute the hugo build
+  - ./hugo
+
+addons
   apt:
     packages:
       - python-pygments
-
-# Clean and don't fail
-install:
-  - rm -rf docs || exit 0
-
-# Build the website
-script:
-  - ./binaries/hugo
 
 # Deploy to GitHub pages
 deploy:
   provider: pages
   skip_cleanup: true
   local_dir: docs
+  target-branch: master
   on:
+    # This will execute the deploy process only on the source branch
     branch: master
