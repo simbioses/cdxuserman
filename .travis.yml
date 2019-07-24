@@ -4,7 +4,7 @@ intall:
 
 script:
   # Execute the hugo build
-  - ./hugo
+  - bin/hugo
 
 branches:
   # I chose to build all branches aside from the master branch
@@ -15,7 +15,7 @@ branches:
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: docs 
+  local_dir: docs
   target-branch: master
   on:
     # This will execute the deploy process only on the source branch
