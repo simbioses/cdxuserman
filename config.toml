@@ -13,9 +13,9 @@ relativeURLs = false
   # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
   # Useful to give opportunity to people to create merge request for your doc.
   # See the config.toml file from this documentation site to have an example.
-  editURL = "https://github.com/awbaer/oscarcdxman/edit/master/content/"
+  editURL = "https://github.com/simbioses/cdxuserman/edit/master/content/"
   # Author of the site, will be used in meta information
-  author = ""
+  author = "Jens Weber"
   # Description of the site, will be used in meta information
   description = "OSCAR CDX Interoperability User Manual"
   # Shows a checkmark for visited pages on the menu
