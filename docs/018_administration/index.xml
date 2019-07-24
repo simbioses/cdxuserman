@@ -11,27 +11,5 @@
 	<atom:link href="https://simbioses.github.io/cdxuserman/018_administration/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Configuration</title>
-      <link>https://simbioses.github.io/cdxuserman/018_administration/cdx_03/</link>
-      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
-      
-      <guid>https://simbioses.github.io/cdxuserman/018_administration/cdx_03/</guid>
-      <description>You can configure and check the connection with the CDX system in OSCAR’s admin panel. The CDX Status tab indicates whether OSCAR is connected with an OBIB.
- Admin → Integration → Clinical Data eXchange (CDX)
-   CDX Configuration    OBIB URL specifies the URL of the Oscar Bidirectional Interoperability Bus (OBIB) Clinic OID specifies the ID assigned to the clinic by CDX. Automatic Import Enabled/Disabled specifies whether OSCAR will automatically download new documents.</description>
-    </item>
-    
-    <item>
-      <title>Manual Document Import</title>
-      <link>https://simbioses.github.io/cdxuserman/018_administration/cdx_04/</link>
-      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
-      
-      <guid>https://simbioses.github.io/cdxuserman/018_administration/cdx_04/</guid>
-      <description>The CDX Admin panel allows administrators to manually download documents from the CDX system.
- Manual Document download is used only for testing and to recover from errors.  Manual download of “new” documents The CDX document distribution system considers documents as “new”, if and only if they have not yet been downloaded from the CDX system.
-OSCAR EMR can be configured to download “new” documents automatically. Hence, manual download of “new” documents is not needed during normal operations.</description>
-    </item>
-    
   </channel>
 </rss>
