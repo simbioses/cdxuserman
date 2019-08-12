@@ -46,11 +46,11 @@ The following steps are going to create a Vagrant VM with OBIB ready to producti
 
 To deploy a new OBIB or redeploy an update of OBIB, execute the deploy provision from the folder Vagrant VM is installed using the following command:
 
-    ```
-    $ vagrant provision --provision-with deploy
-    ```
+```
+$ vagrant provision --provision-with deploy
+```
 
-    *All operations should display **Response code: 2XX** in the console*. In case of error, all deployment operation returns are stored in the folder /home/vagrant/output in the VM.*
+*All operations should display **Response code: 2XX** in the console*. In case of error, all deployment operation returns are stored in the folder /home/vagrant/output in the VM.*
 
 If the installations is successful, Mirth Connect and OBIB is available from the same IP configured in the Step 2. For example, OBIB Connector addres will be available at https://192.168.100.101 and Mirht Connector Adminitration at https://192.168.100.101:8443 if the VM IP address is 192.168.100.101.
 
@@ -97,15 +97,15 @@ This deployment option is executed using the *Mirth Connect Administrator*, avai
 
 Login into the Mirth Connect Administrator
 
-[//]: # TODO add image of Laucher
+[//]: # "TODO add image of Laucher?"
 
 The address and credentials to access Mirth Connect using the Administrator are defined in the mirth_connect.sh file, used during the Vagrant VM installation.
 
-[//]: # TODO add image of Laucher Login
+[//]: # "TODO add image of Laucher Login?"
 
 The two necessary files to deploy OBIB are: the **OBIB_global_scripts.xml**, which contains the Vagrant Global Scripts and **OBIB_channel_group.xml**, which contains the OBIB Channels and Template Codes.
 
-[//]: # TODO add image of Mirth Main screen
+[//]: # "TODO add image of Mirth Main screen?"
 
 To import the Vagrant Global Scripts do:
 
