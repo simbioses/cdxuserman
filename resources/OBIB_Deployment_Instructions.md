@@ -2,17 +2,17 @@
 
 ## Introduction
 
-The server side of OBIB is implemented as a group of Mirth Connect channels that convert the messages received from OBIB Connector to the CDX HL7 format and send this messages to CDA through Web Service.
+The server side of OBIB is implemented as a group of Mirth Connect channels that transforms messages received from the OBIB Connector into CDA messages and sends those messages to CDX through the Web Service.
 
-This server depends of a serie of softwares, such as Mirth Connect, Java, MySQL/MariaDB, OpenSSL and NGINX. Thus, to simplify the OBIB installation, it was created a production-ready Vagrant VM and some administrative scripts to manage the clinics within OBIB.
+OBIB server depends on a serie of softwares, namely Mirth Connect, Java, MySQL/MariaDB, OpenSSL and NGINX. Thus, to simplify the OBIB installation, a production-ready Vagrant VM was created along with administrative scripts to manage the clinics within OBIB.
 
-This document shows how to install a new Vagrant VM, register a new clinic in OBIB. In addiotion it is also shown how to build an OBIB deployment file, and how to manually deploy OBIB within Mirth Connect. These lasts tasks are usefull for OBIB developers.
+This document shows how to install and update the Vagrant VM and how to register a new clinic in OBIB. In addition it is also shown how to build an OBIB deployment file, and how to manually deploy OBIB within Mirth Connect. These lasts tasks are usefull for OBIB developers.
 
 ## Installing a Vagrant VM for OBIB
 
 The following steps are going to create a Vagrant VM with OBIB ready to production.
 
-1. Uncompress the **obib-&lt;version-number&gt;.zip** file and enter in the extracted folder, usually it is **obib-&lt;version-number&gt;/**.
+1. Uncompress the **obib-&lt;version-number&gt;.zip** file and enter in the extracted folder **obib-&lt;version-number&gt;/**.
 
     For development environment it is recommended to start the Vagrant VM from the source folder, e.g., **&lt;dev-workspace&gt;/OBIB/mirthchannels/OBIB_vm**. Thus, any change to the scripts will be immediately available for the VM as well.
 
@@ -44,7 +44,7 @@ The following steps are going to create a Vagrant VM with OBIB ready to producti
 
 ## Deploying OBIB
 
-To deploy a new OBIB or redeploy an update of OBIB, execute the deploy provision from the folder Vagrant VM is installed using the following command:
+To deploy a new OBIB or redeploy an update of OBIB, execute the deploy provision from the folder where Vagrant VM is installed in, using the following command:
 
 ```
 $ vagrant provision --provision-with deploy
@@ -79,6 +79,51 @@ Options:
     -c | --check      : check if a clinic is registered.
                         requires the clinic id as [VALUE]
     -h | --help       : this help information
+```
+
+The register option will create a keystore **obibcerts.pfx** along with other files for the registered clinic (**&lt;clinic_username&gt;.crt**, **&lt;clinic_username&gt;.csr** and **&lt;clinic_username&gt;.key**). Those files must be stored in a safe place, and the keystore copied for the classpath of *OBIB Connector*.
+
+```
+$ ./register.sh -r
+Please, enter the clinic information.
+ notes:
+  - fields marked with (CDX) are information provided or generated within CDX.
+  - fields marked with (OBIB) are new information required to generate the OBIB Connector certificate.
+Clinic ID (CDX): test_clinic_id
+Clinic Name (CDX): Test Clinic Name
+Clinic Username (CDX): clinic_username
+Clinic Password (CDX): clinicPass
+CDX KeyStore Path (CDX): TestClinicKeystore.pfx
+CDX Keystore Password (CDX): keystorePass
+New Password for Clinic Certificate (OBIB): obibKeystorePass
+Please, confirm the clinic information. "c" = confirm, "r" = redo, "q" = quit: c
+
+Saving clinic information...
+
+Verifying clinic registration...
+Clinic registered.
+Certificate file found.
+
+Generating clinic cetificate for OBIB connector...
+Generating a 2048 bit RSA private key
+.................+++
+................+++
+writing new private key to './clinic_username.key'
+-----
+Signature ok
+subject=C = CA, O = OSP, OU = OBIB, CN = Test Clinic Name
+Getting CA Private Key
+Certificate was added to keystore
+
+The clinic certificate was created and imported into OBIB keystore.
+Please, move the generated files (./clinic_username.key, ./clinic_username.csr, ./clinic_username.crt and ./obibcerts.pfx) to a secure place.
+
+$ ls
+certs                deploy.sh          README.md
+clinic_username.crt  gen_obib_certs.sh  register.sh
+clinic_username.csr  install.sh         TestClinicKeystore.pfx
+clinic_username.key  mirth_connect.sh   Vagrantfile
+configs              obibcerts.pfx
 ```
 
 ## Generating the OBIB deployment file
