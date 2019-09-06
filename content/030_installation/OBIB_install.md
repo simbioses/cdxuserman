@@ -74,6 +74,10 @@ $ vagrant provision --provision-with deploy
 
 If the installations is successful, Mirth Connect and OBIB is available from the same IP configured in the Step 2. For example, the OBIB Connector address will be available at https://192.168.100.101 and Mirth Connector Administration at https://192.168.100.101:8443 if the VM IP address is 192.168.100.101.
 
+{{% notice note %}}
+The same command is used for updating the Mirth channels.
+{{% /notice %}}
+
 
 ## Deploy the OBIB Channels (manually)
 
