@@ -9,6 +9,6 @@ chapter = true
 
 {{% notice note %}}
 <p>
-The contents of this section is mainly for admin users and OSCR Service Providers.
+The contents of this section is mainly for admin users and OSCAR Service Providers.
 </p>
 {{% /notice %}}
