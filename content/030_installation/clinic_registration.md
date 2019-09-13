@@ -55,7 +55,7 @@ Options:
     -h | --help       : this help information
 ```
 
-The register option will create a **obibconnector.properties** file and a keystore **obibconnector.keystore** along with other files for the registered clinic (**&lt;clinic_id&gt;.crt**, **&lt;clinic_id&gt;.csr** and **&lt;clinic_id&gt;.key**). All those files must be stored in a safe place, moreover the *keystore* and *properties* must be copied to the secure directory in the EMR system, which is specified in the *mirth_connect.sh*.
+The register option will create a new directory **&lt;clinic_id&gt;** with a properties file **obibconnector.properties**, a keystore **obibconnector.keystore**, and certificate files (**&lt;clinic_id&gt;.crt**, **&lt;clinic_id&gt;.csr** and **&lt;clinic_id&gt;.key**) for the registered clinic. This folder must be stored in a safe place, moreover the *keystore* and *properties* must be copied to the secure directory in the EMR system, which is specified in the *mirth_connect.sh*.
 
 ```
 $ ./register.sh -r

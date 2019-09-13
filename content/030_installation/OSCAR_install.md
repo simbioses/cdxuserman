@@ -5,7 +5,19 @@ weight: 6
 ---
 
 ## OBIB Connector Credentials
-The [Clinic Registration] ({{< ref clinic_registration >}}) process creates two files `obibconnector.properties` and `obibconnector.keystore`that need to be placed in $CATALINA_HOME on the OSCAR server.
+The [Clinic Registration] ({{< ref clinic_registration >}}) process creates two files `obibconnector.properties` and `obibconnector.keystore`that need to be placed in $CATALINA_HOME on the OSCAR server. For example:
+
+```
+$ sudo cp obibconnector.* $CATALINA_HOME/
+```
+
+Then, change the owner of the files to allow tomcat to read them, and change their permissions to secure them from unauthorized read/write.
+
+```
+$ chown tomcat7 obibconnector.*
+
+$ chmod 400 obibconnector.*
+```
 
 ## OSCAR UI Properties
 
