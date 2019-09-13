@@ -32,35 +32,35 @@ The following steps create a Vagrant VM with OBIB ready for production.
 Uncompress the **obib-&lt;version-number&gt;.zip** file and enter in the extracted folder **obib-&lt;version-number&gt;/**.
 
 {{% notice note %}}
-The deployment file can be generated with  ``mvn deploy`` and generate a **obib-&lt;version-number&gt;.zip** the folder *target/* sub-directory.
-For development it is recommended to start the Vagrant VM directly from the source folder, e.g., **&lt;dev-workspace&gt;/OBIB/mirthchannels/OBIB_vm**. Any change to the scripts will be immediately available for the VM as well.
+The deployment file can be generated with  ``mvn deploy``, which will generate **obib-&lt;version-number&gt;.zip** in the */OBIB/target/* sub-directory.
+For development it is recommended to start the Vagrant VM directly from the source folder, e.g., **&lt;dev-workspace&gt;/OBIB/mirthchannels/OBIB_vm**. Thus, any change to the scripts will be immediately available for the VM.
 {{% /notice %}}
 
 Change the configurations in **Vagrantfile** and **mirth_connect.sh** as needed. Most settings are within mirth_connect.sh only, except for the VM IP address which is located in both files.
 
-    VM IP address in Vagrantfile:
+```
+# VM IP address in Vagrantfile:
+config.vm.network "private_network", ip: "192.168.100.101"
 
-    ```
-    config.vm.network "private_network", ip: "192.168.100.101"
-    ```
+# Mirth Connect (VM) IP address in mirth_connect.sh:
+SERVER_IP='192.168.100.101'
+```
 
-    Mirth Connect (VM) IP address in mirth_connect.sh:
-
-    ```
-    SERVER_IP='192.168.100.101'
-    ```
+{{% notice info %}}
+OBIB uses a digital certificate as to sign the server and clients certificates, which are used for SSL authentication. It is recommended to generate a new self-signed digital certificate for production, or use a certificate provided by a Certificate Authority (CA). To generate a new self-signed certificate for OBIB use the script ``gen_obib_certs.sh``. If a CA-signed certificate is used, both private and public key must be copied to the subdirectory ``/configs/ssl``.
+{{% /notice %}}
 
 Start the new Vagrant VM with the environment installed and configured execute the following command:
 
-    ```
-    $ vagrant up
-    ```
+```
+$ vagrant up
+```
 
 Then, restart the VM to ensure all services are starting at boot time:
 
-    ```
-    $ vagrant reload
-    ```
+```
+$ vagrant reload
+```
 
 ## Deploy the OBIB Channels (automatically)
 
@@ -72,7 +72,7 @@ $ vagrant provision --provision-with deploy
 
 *All operations should display **Response code: 2XX** in the console*. In case of error, all deployment operation returns are stored in the folder /home/vagrant/output in the VM.*
 
-If the installations is successful, Mirth Connect and OBIB is available from the same IP configured in the Step 2. For example, the OBIB Connector address will be available at https://192.168.100.101 and Mirth Connector Administration at https://192.168.100.101:8443 if the VM IP address is 192.168.100.101.
+If the installations is successful, Mirth Connect and OBIB is available from the same IP configured previously. For example, the OBIB Connector address will be available at https://192.168.100.101 and Mirth Connector Administration at https://192.168.100.101:8443 if the VM IP address is *192.168.100.101*.
 
 {{% notice note %}}
 The same command is used for updating the Mirth channels.
