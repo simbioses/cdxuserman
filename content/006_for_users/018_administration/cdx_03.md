@@ -12,7 +12,7 @@ You can configure and check the connection with the CDX system in OSCAR’s admi
 {{< figure title="CDX Configuration" src="/images/image001.png" width="100%">}}
 
 - **OBIB URL** specifies the URL of the Oscar Bidirectional Interoperability Bus (OBIB)
-- **Clinic OID** specifies the ID assigned to the clinic by CDX.
+- **Clinic OID** specifies the ID assigned to the clinic by CDX. This is a read only value sourced from the `obibconnector.properties` file installed when OSCAR is configured for CDX.
 - **Automatic Import Enabled/Disabled** specifies whether OSCAR will automatically download new documents.
 - **Polling Interval** specifies the time interval between automatic downloads (in minutes)
 - **Save** button makes the settings persistent
