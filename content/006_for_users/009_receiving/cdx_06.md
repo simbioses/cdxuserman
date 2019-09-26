@@ -13,9 +13,8 @@ OSCAR’s CDX import engine uses the following logic to route incoming CDX docum
 2. (Step 2) if Step 1 did not result in any provider matches *and* if the patient named in the document could be matched to a demographic record in the EMR *then* route the document to the most responsible provider (MRP) of the matched patient (if available).
 3. (Step 3) if Steps 1 and 2 did not result in any provider matches, the document is considered “*unclaimed*" and can be retrieved by searching for “unclaimed” documents in the Inbox.
 
+As usual for OSCAR, unclaimed inbox items are indicated with an asterisk and can be viewed by clicking on the asterisk.
 
-![Click “Search” to find unclaimed documents](https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558112387277_image.png)
+{{< figure title="Inbox indicator" src="/images/inbox_indicator.png" width="150%">}}
 
-![](https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558112257391_image.png)
-
-![Example search result showing an “unclaimed” document](https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558114144052_image.png)
+{{< figure title="Inbox shows document that was **not** linked to provider or patient" src="https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558114144052_image.png" width="150%">}}
