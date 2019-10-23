@@ -16,7 +16,5 @@ Note:
 
 
 {{% notice info %}}
-<p>The update of demographic data is currently not automated.</p>
-<p>There is currently no way to “dismiss” the warning. It will remain in the Inbox viewer even after the demographic record has been updated. (this will be improved in the next version)</p>
-</p>
+The update of demographic data is currently not automated.
 {{% /notice %}}

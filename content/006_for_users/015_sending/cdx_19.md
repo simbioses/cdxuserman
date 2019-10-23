@@ -20,9 +20,9 @@ The new dialogue allows the user to search the CDX provider registry for provide
 
 The search should return a list of specialists that meet the search criteria. They can be added using the `add` button.
 
-![](https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558132543256_image.png)
+{{< figure title="Registry search results" src="/images/recipSearchRes.png" width="100%">}}
 
-⚠️ At this point, Interior Health Authority's provider registry does not provide us with the speciality of providers. Therefore, the speciality needs to be added manually in the usual way:
+⚠️ At this point, Interior Health Authority's provider registry does not provide the *speciality* of specialist providers. Therefore, the speciality needs to be added manually in the usual way:
 
 > Show All Services → Select a service, e.g., Cardiology → Select the specialists that provide this service → Click Update
 
@@ -34,7 +34,3 @@ The search should return a list of specialists that meet the search criteria. Th
 Clinics will likely have existing specialists in their EMR database. OSCAR allows users to update these records where existing specialists are found to be CDX capable. This can be done automatically or manually. The `Edit Specialists` UI has a new `Test CDX Availability` function that (if invoked) will test the CDX availability of *all* specialists stored at the clinic (and update the local database accordingly).
 
 {{< figure title="Updating existing specialists (automatic, batch)" src="/images/spec_update.png" width="100%">}}
-
-Existing specialist records can also be updated manually to add their CDX credentials. For that purpose, select a specialist record and add the CDX id for this provider.
-
-{{< figure title="Updating existing specialists (manually, single specialist)" src="/images/spec_update_man.png" width="100%">}}

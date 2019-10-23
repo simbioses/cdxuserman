@@ -8,7 +8,7 @@ The CDX Admin panel allows administrators to manually download documents from th
 
 {{% notice info %}}
 <p>
-Manual Document download is used only for testing and to recover from errors.
+The system should normally be configured for *automatic download*. Manual document download should be used only for testing, to recover documents that were inadvertently deleted by users, or to retry failed downloads.
 </p>
 {{% /notice %}}
 
@@ -16,7 +16,7 @@ Manual Document download is used only for testing and to recover from errors.
 
 The CDX document distribution system considers documents as “new”, if and only if they have not yet been downloaded from the CDX system.
 
-OSCAR EMR can be configured to download “new” documents automatically. Hence, manual download of “new” documents is not needed during normal operations. However, it may be useful for testing purposes.
+OSCAR EMR should be configured to download “new” documents automatically. Hence, manual download of “new” documents is not needed during normal operations. However, it may be useful for testing purposes.
 
 The Admin panel indicates the number of “new” documents waiting for a clinic. They can be downloaded manually using the `import` button (only visible if “new” documents are available).
 
@@ -27,12 +27,12 @@ The Admin panel indicates the number of “new” documents waiting for a clinic
 
 The CDX document distribution system considers documents as “old” if the EMR system has downloaded them already. Still, the CDX system retains downloaded documents for an unspecified time, so that they can be downloaded again.
 
-*Why import a document that has already been downloaded?*
+***Why import a document that has already been downloaded?***
 
 This should be necessary only in two types of (exceptional) cases:
 
 1. **Import Errors**. If an error occurred during document import, the document is considered delivered (“old”) from the perspective of the CDX system. However, the document has not successfully been imported by the EMR. Once the problem has been diagnosed and fixed, the admin can use the CDX Admin panel to download the document(s) that could not be imported before (see below).
-2. **Undo Document Deletion**. EMR users have the ability to delete imported documents if they are convinced that the document was delivered in error. The CDX Admin panel allows a user to effectively undo such a manual deletion if it turns out that the document was deleted in error (see below).
+2. **Undo Document Deletion**. EMR users have the ability to delete imported documents if they are convinced that the document was delivered in error. The CDX Admin panel allows a user to effectively undo such a manual deletion if it turns out that the document should not have been deleted (see below).
 
 The CDX Admin panel has a table showing those documents available from the CDX system that are not currently imported in the EMR. They can selectively be imported.
 

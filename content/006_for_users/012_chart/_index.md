@@ -12,12 +12,10 @@ CDX documents appear under “Documents” in the patient’s eChart. For exampl
 
 ![](https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558131674577_image.png)
 
+As usual, CXDX documents can also be viewed and sorted with the *Document Management System*:
+
+{{< figure title="Document Management System" src="/images/docmansys.png" width="100%">}}
 {{% notice note %}}
+
 Note: Documents received from a specialist in response to an e-referral request (consultation) can also be viewed by opening the consultation request and viewing the responses (left side bar).
-{{% /notice %}}
-
---
-
-{{% notice note %}}
-Note: in future versions of the CDX integration, Oscar may “sort” CDX document types that contain lab results under “Lab Results” in the eChart.
 {{% /notice %}}

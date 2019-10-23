@@ -6,9 +6,14 @@ weight: 6
 
 E-referrals are created in the usual way (like normal “consultations”) . Of course, it is important to select a CDX-capable specialist as the “Consultant”. These specialists are clearly marked in the dropdown box with a “(CDX)” prefix to their names (see below). They are also at the top of the list of specialists.
 
-![](https://paper-attachments.dropbox.com/s_D8F55B926E14BC491F2DAD18D930CB06AD57C72BB921C2ECDB6B0AA89F2D0027_1558133350031_image.png)
+{{% notice info %}}
+Some providers may work for more than one clinic. In this case, the user can select a specific clinic to direct the referral to. Alternatively, the referral can be sent to all clinics the provider works for.
+{{% /notice %}}
 
-attachments can be added to the e-Referral (see left side of window). Once the data on the referral has been entered completely, the e-referral can be sent using the `Submit and Save CDX e-Referral` button (top right).
+{{< figure title="Select a CDX capable recipient" src="/images/consultform.png" width="100%">}}
+
+
+Attachments can be added to the e-Referral (see left side of window). Once the data on the referral has been entered completely, the e-referral can be sent using the `Submit and Save CDX e-Referral` button (top right or buttom right).
 
 Sending the e-Referral may take a few seconds. If the document was successfully sent to the CDX delivery system, the user will see a success window, which will close automatically after 5 seconds (see below).
 

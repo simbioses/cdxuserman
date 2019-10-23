@@ -4,12 +4,17 @@ date: 2019-06-14T11:37:29-07:00
 weight: 3
 ---
 
-
-You can configure and check the connection with the CDX system in OSCAR’s admin panel. The **CDX Status** tab indicates whether OSCAR is connected with an OBIB.
+The CDX systems needs to be connected to the OBIB (*Oscar Bidirectional Interoperability Bus*) exchange data. Users with role "admin" can check this in the CDX user interface in OSCAR's Admin panel.
 
 > Admin → Integration → Clinical Data eXchange (CDX)
 
+The **CDX Status** tab indicates whether OSCAR is connected with an OBIB.
+
+If the CDX Status tab indicates *The OBIB is not connected*, please contact your OSCAR Service Provider.
+
 {{< figure title="CDX Configuration" src="/images/image001.png" width="100%">}}
+
+Administrators can configure the OBIB connection:
 
 - **OBIB URL** specifies the URL of the Oscar Bidirectional Interoperability Bus (OBIB)
 - **Clinic OID** specifies the ID assigned to the clinic by CDX. This is a read only value sourced from the `obibconnector.properties` file installed when OSCAR is configured for CDX.
