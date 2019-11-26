@@ -29,25 +29,22 @@ As already mentioned, the *source connector* of the **OBIB Services** channel is
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable. Also, the CDA Document is included in the OBIB response, both in JSON and XML formats after parsed by the [CDA Document Parser](#-CDA-Document-Parser) channel.
   * The metadata from both sent documents and responses from CDX are stored in the OBIB Database by [Document Storage](#-Document-Storage) channel.
 
-* **Service List New Documents** is responsible for listing/pooling new CDA documents for a specific clinic.
-  * It uses the method ```WSClientDocument.listNewDocuments()``` from the [CDXConnector library](#-CDX-Connector).
+* **Service List New Documents** is responsible for listing/pooling new CDA documents for a specific clinic. It uses the method ```WSClientDocument.listNewDocuments()``` from the [CDXConnector library](#-CDX-Connector).
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable.
 
-* **Service Search Documents** is responsible for searching for documents by effective and event period, clinic id or document id.
-  * It uses the method ```WSClientDocument.searchDocuments()``` from the [CDXConnector library](#-CDX-Connector).
+* **Service Search Documents** is responsible for searching for documents by effective and event period, clinic id or document id. It uses the method ```WSClientDocument.searchDocuments()``` from the [CDXConnector library](#-CDX-Connector).
   * The search parameters are mapped via Mapper *transformers*.
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable.
 
-* **Service Get Document** is responsible for getting a specific document by its id.
-  * It uses the method ```WSClientDocument.getDocument()``` from the [CDXConnector library](#-CDX-Connector).
+* **Service Get Document** is responsible for getting a specific document by its id. It uses the method ```WSClientDocument.getDocument()``` from the [CDXConnector library](#-CDX-Connector).
   * The query parameter is mapped via a Mapper *transformer*.
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable.
 
-* **Service List Clinics** is responsible for search/list clinics by clinic id, clinic name, and clinic address.
+* **Service List Clinics** is responsible for search/list clinics by clinic id, clinic name, and clinic address. It uses the method ```WSClientClinic.listClinics()``` from the [CDXConnector library](#-CDX-Connector).
   * The search parameters are mapped via Mapper *transformers*.
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable. Moreover, the Clinic Registry is parsed by the [CDA Registry Parser](#CDA-Registry-Parser) channel.
 
-* **Service List Providers** is responsible for search/list providers by clinic id, provider id and provider name.
+* **Service List Providers** is responsible for search/list providers by clinic id, provider id and provider name. It uses the method ```WSClientProvider.listProviders()``` from the [CDXConnector library](#-CDX-Connector).
   * The search parameters are mapped via Mapper *transformers*.
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable. Moreover, the Provider Registry is parsed by the [CDA Registry Parser](#CDA-Registry-Parser) channel.
 
@@ -55,7 +52,7 @@ As already mentioned, the *source connector* of the **OBIB Services** channel is
   * A JavaScript *transformer* encodes the message for the [OSP Support](#-OSP-Support) channel.
   * A JavaScript *response transformer* generate a response for the OBIB client.
 
-* **Service Distribution Status** is responsible for searching/requesting the distribution status of a document from CDX.
+* **Service Distribution Status** is responsible for searching/requesting the distribution status of a document from CDX. It uses the method ```WSClientDocument.getDistributionStatus()``` from the [CDXConnector library](#-CDX-Connector).
   * The search/request parameters are mapped via Mapper *transformers*.
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable.
 
