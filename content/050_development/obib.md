@@ -8,6 +8,30 @@ weight: 11
 
 [//]: # (TODO)
 
+## OBIB VM
+
+The OBIB VM is an *Ubuntu 18.04* VM build and managed using [Vagrant](https://www.vagrantup.com/). When deployed, **OBIB VM** contains all software necessary to execute the OBIB services.
+
+### Configuration Files and Scripts
+
+* **Vagrantfile** is the Vagrant definition file for the virtual machine and its configurations, such as memory, network type, IP address, forwarded ports, and shared folders.
+
+* **mirth_connect.sh** contains the configurations needed to install the software within the VM and deploy the OBIB Services.
+
+* **install.sh** is executed automatically during the VM installation and it is responsible for install and configure all software required by OBIB. When executed the script:
+  * Update the Operating System - [Ubuntu](http://releases.ubuntu.com/18.04/);
+  * Install the [OpenJDK 8](https://openjdk.java.net/), required by Mirth Connect;
+  * Install and configure the [Nginx](https://www.nginx.com/), that works as a reverse proxy and implements SSL/TLS;
+  * Install additional XML tools necessary by other scripts;
+  * Install and configure the [MariaDB Server](https://mariadb.org/), utilized by MirthConnect and OBIB;
+  * Install and configure the [Mirth Connect](http://www.mirthcorp.com/community/wiki/display/mirth/Home)
+
+* **deploy.sh** is executed by as a [Vagrant provision](https://www.vagrantup.com/docs/cli/provision.html) and it is responsible for deploy and update OBIB within Mirth Connect. This script updates the database by running the script ```./dbscripts/OBIB_DB_update.sql```; updates the Mirth Connect's resources, global scripts, channels and code template libraries; and redeploy all Mirth Connect's channels. To execute these actions the **deploy.sh** script execute calls to the Mirth Connect's Client API.
+
+* **register.sh** is an administrative script responsible for the clinics' management (register, unregister, and verification). For security reasons, this script should be executed from within the VM.
+
+* **gen_obib_certs.sh** is a helper script that generates a self-signed SSL/TLS CA certificate for OBIB. This certificate is utilized to generate the clinics' certificates, which are utilized by OBIB Connector to access the OBIB Services. For security reasons, this script should be executed from within the VM.
+
 ### Channels
 
 #### OBIB Services
@@ -19,7 +43,7 @@ This channel is responsible for:
 * Transform the JSON messages to CDA Documents;
 * Send the HL7 messages to the CDX WebServices using the **CDX Connector** Java Library;
 
-As already mentioned, the *source connector* of the **OBIB Services** channel is an HTTP Listener that implements different services. These services are implemented by the Destination Set Filter *source connector* that routes the messages for the correct *destination connector* according to the *context path* of the HTTP request. Moreover, this channel has a couple of JavaScript *source connectors* to validate the Clinic's credentials and OBIB Connector version. Also, this HTTP Listener implements a custom HTTP authentication using the **clinicId** and **password** passed in the HTTP request header.
+As already mentioned, the *source connector* of the **OBIB Services** channel is an HTTP Listener that implements different services. These services are implemented by the Destination Set Filter *source connector* that routes the messages for the correct *destination connector* according to the *context path* of the HTTP request. Moreover, this channel has a couple of JavaScript *source connectors* to validate the Clinic's credentials and OBIB Connector version. Also, this HTTP Listener implements a custom HTTP authentication using the **clinicId** and **password** which are sent in the HTTP request header.
 
 **OBIB Services** implements the following services using JavaScript Writer *destination connectors*.
 
@@ -80,11 +104,11 @@ To select which *destination connector* is responsible for a message, the *sourc
 
 This channel is responsible for receive and store (error) messages, and forward them via email.
 
-Its *source connector* is a Channel Reader and to handle the messages **OSP Support** has two *destination connectors*, which are:
+Its *source connector* is a Channel Reader and to handle the messages **OSP Support** has two chained *destination connectors*, which are executed in sequence. The channels are:
 
 * **Store Error Message** is a Database Writer and it is responsible for persisting the message in the OBIB Database.
 
-* **Send Notification Email** is a SMTP Sender and it is responsible for sending the messages via e-mail for the registered recipients.
+* **Send Notification Email** is a SMTP Sender and it is responsible for sending the messages via e-mail for the registered recipients. To test this service, [FakeSMTP](http://nilhcem.com/FakeSMTP/) is being used as a mock SMTP local server. It must be run separately, and the received emails are saved in files locally.
 
 #### Document Storage
 
@@ -96,7 +120,7 @@ To select which *destination connector* is responsible for a message, the *sourc
 
 ### Global Scripts
 
-OBIB only utilizes the *Deploy* global script, that executes once for each deploys or redeploy task. This script loads information from the properties file, and from the OBIB Database, and stores this information in the global map to be accessible by the channels.
+OBIB only utilizes the *Deploy* global script, that executes once for each deploys or redeploy task. This script loads information from the properties file, and the OBIB Database, and stores this information in the global map to be accessible by the channels.
 
 ### Code Templates
 
@@ -118,7 +142,7 @@ The following plugins are utilized to automate the WS client code generation:
 
 The classes **WSClientDocument.java**, **WSClientClinic.java**, **WSClientProvider.java** contain the public methods that call the CDX WS methods.
 
-The package **ca.uvic.leadlab.cdxconnector.messages** contain builders and object factories to create WS messages.
+The package **ca.uvic.leadlab.cdxconnector.messages** contains builders and object factories to create WS messages.
 
 The folder **src/main/resources/wsdl** stores the WSDL and XSD files downloaded from CDX, and utilized to generate the WS client code.
 
@@ -143,7 +167,3 @@ OBIB Connector is a Java library responsible for connecting to OBIB REST service
 * Package **models** define the class structure of the OBIB JSON Document. These classes are utilized to generate the JSON messages sent to the OBIB.
 
 * Package **rest** implements the client methods for the OBIB REST services. The REST client utilizes the setting in the **obibconnector.properties** file to communicate with the OBIB.
-
-## OBIB VM
-
-[//]: # (TODO)
