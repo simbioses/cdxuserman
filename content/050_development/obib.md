@@ -4,9 +4,7 @@ date: 2019-11-21T12:50:21-07:00
 weight: 11
 ---
 
-## OBIB
-
-[//]: # (TODO)
+The *Oscar Bidirectional Interoperability Bus* (**OBIB**) provides a set of services to achieve interoperability between Oscar and CDX. These services are implemented through Mirth Connect channels and a couple of Web Services and RESTful clients. In addition, OBIB is embedeed in a Virtual Machine (VM) defined by Vagrant.
 
 ## OBIB VM
 
@@ -31,6 +29,8 @@ The OBIB VM is an *Ubuntu 18.04* VM build and managed using [Vagrant](https://ww
 * **register.sh** is an administrative script responsible for the clinics' management (register, unregister, and verification). For security reasons, this script should be executed from within the VM.
 
 * **gen_obib_certs.sh** is a helper script that generates a self-signed SSL/TLS CA certificate for OBIB. This certificate is utilized to generate the clinics' certificates, which are utilized by OBIB Connector to access the OBIB Services. For security reasons, this script should be executed from within the VM.
+
+## OBIB Service
 
 ### Channels
 
@@ -126,7 +126,7 @@ OBIB only utilizes the *Deploy* global script, that executes once for each deplo
 
 OBIB has a number of *code templates*, which are functions that can be used across multiple channels. These *code templates* are divided into two *code template libraries* just to organization purpose. The **OBIB** library contains general use scripts and the **CDA** library contains scripts to parse, format and build CDA message snippets.
 
-## Connectors
+## Connectors (Services Clients)
 
 ### CDX Connector
 
