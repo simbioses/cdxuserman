@@ -24,11 +24,23 @@ The OBIB VM is an *Ubuntu 18.04* VM build and managed using [Vagrant](https://ww
   * Install and configure the [MariaDB Server](https://mariadb.org/), utilized by MirthConnect and OBIB;
   * Install and configure the [Mirth Connect](http://www.mirthcorp.com/community/wiki/display/mirth/Home)
 
-* **deploy.sh** is executed by as a [Vagrant provision](https://www.vagrantup.com/docs/cli/provision.html) and it is responsible for deploy and update OBIB within Mirth Connect. This script updates the database by running the script ```./dbscripts/OBIB_DB_update.sql```; updates the Mirth Connect's resources, global scripts, channels and code template libraries; and redeploy all Mirth Connect's channels. To execute these actions the **deploy.sh** script execute calls to the Mirth Connect's Client API.
+* **deploy.sh** is executed as a [Vagrant provision](https://www.vagrantup.com/docs/cli/provision.html) and it is responsible for deploy and update OBIB within Mirth Connect. **deploy.sh** updates the database by running the script *./dbscripts/OBIB_DB_update.sql*, updates the Mirth Connect's resources, global scripts, channels and code template libraries, and redeploy all Mirth Connect's channels.
+{{% notice note %}}
+See the section [OBIB Installation]({{< ref "/030_installation/obib_install.md#deploy-the-obib-channels-automatically" >}}) for instruction on how to run **deploy.sh**.
+{{% /notice %}}
 
-* **register.sh** is an administrative script responsible for the clinics' management (register, unregister, and verification). For security reasons, this script should be executed from within the VM.
+* **register.sh** is an administrative script responsible for the clinics' management (register, unregister, and verification).
+{{% notice note %}}
+Instructions on how to use **register.sh** are in the section [Clinic Registration]({{< ref "/030_installation/clinic_registration.md#2-registering-the-clinic-in-obib" >}}) of this manual.
+{{% /notice %}}
+{{% notice info %}}
+For security reasons, this script should be executed from within the VM.
+{{% /notice %}}
 
-* **gen_obib_certs.sh** is a helper script that generates a self-signed SSL/TLS CA certificate for OBIB. This certificate is utilized to generate the clinics' certificates, which are utilized by OBIB Connector to access the OBIB Services. For security reasons, this script should be executed from within the VM.
+* **gen_obib_certs.sh** is a helper script that generates a self-signed SSL/TLS CA certificate for OBIB. This certificate is utilized to generate the clinics' certificates, which are utilized by OBIB Connector to access the OBIB Services.
+{{% notice info %}}
+For security reasons, this script should be executed from within the VM.
+{{% /notice %}}
 
 ## OBIB Service
 
@@ -49,34 +61,34 @@ As already mentioned, the *source connector* of the **OBIB Services** channel is
 
 * **Service Submit Document** is responsible for creating and submit CDA Documents.
   * It receives the messages in OBIB JSON format and converts them to CDX HLX using some JavaScript *transformers*.
-  * The transformed document is sent to CDX using the method ```WSClientDocument.submitDocument()``` from the [CDXConnector library](#-CDX-Connector).
-  * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable. Also, the CDA Document is included in the OBIB response, both in JSON and XML formats after parsed by the [CDA Document Parser](#-CDA-Document-Parser) channel.
-  * The metadata from both sent documents and responses from CDX are stored in the OBIB Database by [Document Storage](#-Document-Storage) channel.
+  * The transformed document is sent to CDX using the method ```WSClientDocument.submitDocument()``` from the [CDXConnector library]({{< ref "#cdx-connector" >}}).
+  * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable. Also, the CDA Document is included in the OBIB response, both in JSON and XML formats after parsed by the [CDA Document Parser]({{< ref "#cda-document-parser" >}}) channel.
+  * The metadata from both sent documents and responses from CDX are stored in the OBIB Database by [Document Storage]({{< ref "#document-storage" >}}) channel.
 
-* **Service List New Documents** is responsible for listing/pooling new CDA documents for a specific clinic. It uses the method ```WSClientDocument.listNewDocuments()``` from the [CDXConnector library](#-CDX-Connector).
+* **Service List New Documents** is responsible for listing/pooling new CDA documents for a specific clinic. It uses the method ```WSClientDocument.listNewDocuments()``` from the [CDXConnector library]({{< ref "#cdx-connector" >}}).
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable.
 
-* **Service Search Documents** is responsible for searching for documents by effective and event period, clinic id or document id. It uses the method ```WSClientDocument.searchDocuments()``` from the [CDXConnector library](#-CDX-Connector).
+* **Service Search Documents** is responsible for searching for documents by effective and event period, clinic id or document id. It uses the method ```WSClientDocument.searchDocuments()``` from the [CDXConnector library]({{< ref "#cdx-connector" >}}).
   * The search parameters are mapped via Mapper *transformers*.
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable.
 
-* **Service Get Document** is responsible for getting a specific document by its id. It uses the method ```WSClientDocument.getDocument()``` from the [CDXConnector library](#-CDX-Connector).
+* **Service Get Document** is responsible for getting a specific document by its id. It uses the method ```WSClientDocument.getDocument()``` from the [CDXConnector library]({{< ref "#cdx-connector" >}}).
   * The query parameter is mapped via a Mapper *transformer*.
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable.
 
-* **Service List Clinics** is responsible for search/list clinics by clinic id, clinic name, and clinic address. It uses the method ```WSClientClinic.listClinics()``` from the [CDXConnector library](#-CDX-Connector).
+* **Service List Clinics** is responsible for search/list clinics by clinic id, clinic name, and clinic address. It uses the method ```WSClientClinic.listClinics()``` from the [CDXConnector library]({{< ref "#cdx-connector" >}}).
   * The search parameters are mapped via Mapper *transformers*.
-  * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable. Moreover, the Clinic Registry is parsed by the [CDA Registry Parser](#CDA-Registry-Parser) channel.
+  * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable. Moreover, the Clinic Registry is parsed by the [CDA Registry Parser]({{< ref "#cda-registry-parser" >}}) channel.
 
-* **Service List Providers** is responsible for search/list providers by clinic id, provider id and provider name. It uses the method ```WSClientProvider.listProviders()``` from the [CDXConnector library](#-CDX-Connector).
+* **Service List Providers** is responsible for search/list providers by clinic id, provider id and provider name. It uses the method ```WSClientProvider.listProviders()``` from the [CDXConnector library]({{< ref "#cdx-connector" >}}).
   * The search parameters are mapped via Mapper *transformers*.
-  * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable. Moreover, the Provider Registry is parsed by the [CDA Registry Parser](#CDA-Registry-Parser) channel.
+  * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable. Moreover, the Provider Registry is parsed by the [CDA Registry Parser]({{< ref "#cda-registry-parser" >}}) channel.
 
-* **Service OSP Support** is responsible for process (error) notifications from the OBIB clients using the [OSP Support](#-OSP-Support) channel.
-  * A JavaScript *transformer* encodes the message for the [OSP Support](#-OSP-Support) channel.
+* **Service OSP Support** is responsible for process (error) notifications from the OBIB clients using the [OSP Support]({{< ref "#osp-support" >}}) channel.
+  * A JavaScript *transformer* encodes the message for the [OSP Support]({{< ref "#osp-support" >}}) channel.
   * A JavaScript *response transformer* generate a response for the OBIB client.
 
-* **Service Distribution Status** is responsible for searching/requesting the distribution status of a document from CDX. It uses the method ```WSClientDocument.getDistributionStatus()``` from the [CDXConnector library](#-CDX-Connector).
+* **Service Distribution Status** is responsible for searching/requesting the distribution status of a document from CDX. It uses the method ```WSClientDocument.getDistributionStatus()``` from the [CDXConnector library]({{< ref "#cdx-connector" >}}).
   * The search/request parameters are mapped via Mapper *transformers*.
   * The CDX response is transformed into a JavaScript *Response Transformer* and is sent back to the OBIB client through the ```responseMessage``` variable.
 
@@ -125,6 +137,20 @@ OBIB only utilizes the *Deploy* global script, that executes once for each deplo
 ### Code Templates
 
 OBIB has a number of *code templates*, which are functions that can be used across multiple channels. These *code templates* are divided into two *code template libraries* just to organization purpose. The **OBIB** library contains general use scripts and the **CDA** library contains scripts to parse, format and build CDA message snippets.
+
+### Development Environment
+
+Since OBIB is implemented in Mirth Connect, the easiest way to maintain code is by using the *Mirth Connect Administrator*. To execute the *Mirth Connect Administrator* it is necessary download an *Administrator Launcher*, which is available in the Mirth Connect Launch Page (see figure below), or in the [Nextgen's download page](https://www.nextgen.com/products-and-services/nextgen-connect-integration-engine-downloads).
+
+{{< figure title="Mirth Connect Launch Page" src="/images/mirth_connect_launch_page.png" width="50%">}}
+
+{{% notice note %}}
+See the section [OBIB Installation]({{< ref "/030_installation/obib_install.md#deploy-the-obib-channels-manually" >}}) for instruction on how to login into **Mirth Connect Administrator**.
+{{% /notice %}}
+
+{{% notice info %}}
+The easiest way to use **Mirth Connect Administrator** is download it from the Nextgen's download page and run it by calling the ```./launcher``` script.
+{{% /notice %}}
 
 ## Connectors (Services Clients)
 
