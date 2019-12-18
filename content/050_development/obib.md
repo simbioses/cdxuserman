@@ -193,3 +193,9 @@ OBIB Connector is a Java library responsible for connecting to OBIB REST service
 * Package **models** define the class structure of the OBIB JSON Document. These classes are utilized to generate the JSON messages sent to the OBIB.
 
 * Package **rest** implements the client methods for the OBIB REST services. The REST client utilizes the setting in the **obibconnector.properties** file to communicate with the OBIB.
+
+#### Testing
+
+{{% notice info %}}
+The OBIB Connector tests connect to OBIB using SSL/TLS. Thus, when a new OBIB is deployed in the development environment it is necessary copy the new clinic keystore to the folder /certs in obibconnector and run the maven task 'package';
+{{% /notice %}}
