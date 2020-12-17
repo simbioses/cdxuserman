@@ -18,8 +18,3 @@ graph LR;
 
 CDX Composer can be opened by clicking "CDX Composer" on the top right of the main window as shown in the pic below.
 {{< figure title="To open CDX Composer" src="/images/reachCdxComposer.png" width="100%">}}
-
-
-{{% notice note %}}
-CDX Composer uses OSCAR inbox to receive information request, progress note and patient summary.
-{{% /notice %}}

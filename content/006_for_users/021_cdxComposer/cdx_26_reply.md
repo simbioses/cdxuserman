@@ -16,4 +16,4 @@ Users can add more information in the composer and send the document as a respon
 {{< figure title="Reply" src="/images/ReplyCdxMessenger.png" width="100%">}}
 
 Users can also view the detailed document to which they are responding by clicking the document type link inside "in response to {document type}" in the CDX composer as well as in the history page.
-{{< figure title="Reply" src="/images/InResponseTo.png" width="100%">}}
+{{< figure title="Document to which User is responding" src="/images/InResponseTo.png" width="100%">}}

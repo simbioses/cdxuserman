@@ -7,7 +7,7 @@ weight: 6
 CDX Composer can be used to send different CDX documents like information request, progress note and patient summary from a single interface. 
 
 
-{{< figure title="CDX Composer" src="/images/CdxComposer.png" width="90%">}}
+{{< figure title="CDX Composer UI" src="/images/CdxComposer.png" width="90%">}}
 
 #### Patient
 Patients can be directly searched by their first and last name and added to the document. 
