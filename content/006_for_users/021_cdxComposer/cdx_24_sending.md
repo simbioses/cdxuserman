@@ -1,7 +1,7 @@
 ---
 title: "Sending"
 date: 2019-06-14T11:37:29-07:00
-weight: 6
+weight: 3
 ---
 
 CDX Composer can be used to send different CDX documents like information request, progress note and patient summary from a single interface. 

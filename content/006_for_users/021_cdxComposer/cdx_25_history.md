@@ -1,7 +1,7 @@
 ---
 title: "History"
 date: 2019-06-15T11:37:29-07:00
-weight: 7
+weight: 6
 ---
 ## History
 CDX Composer keeps track of all the Cdx documents sent through CDX Composer.
