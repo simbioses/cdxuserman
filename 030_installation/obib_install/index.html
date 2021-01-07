@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="description" content="OSCAR CDX Interoperability Manual">
+<meta name="author" content="Jens Weber">
+
+    <link rel="icon" href="https://simbioses.github.io/cdxuserman/images/favicon.png" type="image/png">
+
+    <title>OBIB Installation :: OSCAR CDX Interoperability User Manual</title>
+
+    
+    <link href="https://simbioses.github.io/cdxuserman/css/nucleus.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/fontawesome-all.min.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/hybrid.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/featherlight.min.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/perfect-scrollbar.min.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/auto-complete.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/atom-one-dark-reasonable.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/theme.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/hugo-theme.css?1610063419" rel="stylesheet">
+    
+      <link href="https://simbioses.github.io/cdxuserman/css/theme-blue.css?1610063419" rel="stylesheet">
+    
+
+    <script src="https://simbioses.github.io/cdxuserman/js/jquery-3.3.1.min.js?1610063419"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/030_installation/obib_install/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://simbioses.github.io/cdxuserman/">
+  <img src="https://simbioses.github.io/cdxuserman//images/layout/oscarcdxlogo.png">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://simbioses.github.io/cdxuserman/js/lunr.min.js?1610063419"></script>
+<script type="text/javascript" src="https://simbioses.github.io/cdxuserman/js/auto-complete.js?1610063419"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/simbioses.github.io\/cdxuserman\/";
+    
+</script>
+<script type="text/javascript" src="https://simbioses.github.io/cdxuserman/js/search.js?1610063419"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/003_introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/003_introduction/">
+          Introduction
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/" title="For Users" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/">
+          For Users
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/009_receiving/" title="Receiving" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/">
+          Receiving
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_06/" title="Routing to the Inbox" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_06/">
+        Routing to the Inbox
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_08/" title="Associating incoming documents with patients" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_08/">
+        Associating incoming documents with patients
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_09/" title="Information shown in Inbox view" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_09/">
+        Information shown in Inbox view
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_10/" title="Viewing and Acknowledging CDX Documents" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_10/">
+        Viewing and Acknowledging CDX Documents
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_11/" title="Demographic data consistency warning" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_11/">
+        Demographic data consistency warning
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_12/" title="Manually linking documents to existing patient demographics" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_12/">
+        Manually linking documents to existing patient demographics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_13/" title="Creating a new Demographic" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_13/">
+        Creating a new Demographic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_14/" title="Deleting a CDX Document that was received in error" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_14/">
+        Deleting a CDX Document that was received in error
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_15/" title="Viewing documents with different versions" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_15/">
+        Viewing documents with different versions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_16/" title="Related documents" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_16/">
+        Related documents
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_18/" title="Document status" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_18/">
+        Document status
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/012_chart/" title="Patient’s eChart" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/012_chart/">
+          Patient’s eChart
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/015_sending/" title="Bidirectional Workflows: e-Referrals" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/">
+          Bidirectional Workflows: e-Referrals
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/015_sending/cdx_19/" title="Recipient Registry" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_19/">
+        Recipient Registry
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/015_sending/cdx_20/" title="Sending an e-Referral" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_20/">
+        Sending an e-Referral
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/015_sending/cdx_21/" title="Checking the status of a Referral" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_21/">
+        Checking the status of a Referral
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/015_sending/cdx_22/" title="Updating a Referral" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_22/">
+        Updating a Referral
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/015_sending/cdx_23/" title="Receiving Responses" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_23/">
+        Receiving Responses
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/018_administration/" title="Administration" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/018_administration/">
+          Administration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/018_administration/cdx_03/" title="Configuration" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_03/">
+        Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/018_administration/cdx_04/" title="Manual Document Import" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_04/">
+        Manual Document Import
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/021_cdxcomposer/" title="CDX Composer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/">
+          CDX Composer
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/021_cdxcomposer/cdx_24_sending/" title="Sending" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_24_sending/">
+        Sending
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/021_cdxcomposer/cdx_25_history/" title="History" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_25_history/">
+        History
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/021_cdxcomposer/cdx_26_reply/" title="Receiving and Reply" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_26_reply/">
+        Receiving and Reply
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/024_safetynotificationsystem/" title="Safety Notification System" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/024_safetynotificationsystem/">
+          Safety Notification System
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/030_installation/" title="For OSPs" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/030_installation/">
+          For OSPs
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/030_installation/obib_install/" title="OBIB Installation" class="dd-item active">
+        <a href="https://simbioses.github.io/cdxuserman/030_installation/obib_install/">
+        OBIB Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/030_installation/clinic_registration/" title="Clinic Registration" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/030_installation/clinic_registration/">
+        Clinic Registration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/030_installation/oscar_install/" title="OSCAR Installation" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/030_installation/oscar_install/">
+        OSCAR Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/050_development/" title="For Developers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/050_development/">
+          For Developers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/architecture/" title="Architecture" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/architecture/">
+        Architecture
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/datamodel/" title="Data Model" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/datamodel/">
+        Data Model
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/import/" title="Import" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/import/">
+        Import
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/inbox/" title="Inbox" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/inbox/">
+        Inbox
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/echart/" title="eChart" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/echart/">
+        eChart
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/referral/" title="Referral" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/referral/">
+        Referral
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/obib/" title="OBIB" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/obib/">
+        OBIB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p> Last Updated: November 21, 2019 @ 12:50 -0700</p></br>
+<p>Generated with <a href="http://gohugo.io/">Hugo</a> using <a href="https://github.com/matcornic/hugo-theme-learn">Learn theme</a></p>
+<p>Copyright by <a href="http://www.leadlab.ca/">LEAD lab </a> </p>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/simbioses/cdxuserman/edit/src/content/030_installation/OBIB_install.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://simbioses.github.io/cdxuserman/'>Home</a> > <a href='https://simbioses.github.io/cdxuserman/030_installation/'>For OSPs</a> > OBIB Installation
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#installing-the-vm-for-obib">Installing the VM for OBIB</a></li>
+<li><a href="#deploy-the-obib-channels-automatically">Deploy the OBIB Channels (automatically)</a></li>
+<li><a href="#deploy-the-obib-channels-manually">Deploy the OBIB Channels (manually)</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              OBIB Installation
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>OSCAR EMR instances connect to the CDX message distribution system via the <em>Oscar Bidirectional Interoperability Bus</em> (<strong>OBIB</strong>). An OBIB can support many OSCAR instances. Therefore, an OSP only needs to operate one OBIB.</p>
+
+<pre><code class="language-mermaid">classDiagram
+  OSCAR1 --&gt; OBIB
+  OSCAR2 --&gt; OBIB
+  OSCAR3 --&gt; OBIB
+  OSCAR4 --&gt; OBIB
+    OSCARn --&gt; OBIB
+  OBIB --&gt; CDX
+    CDX &lt;--&gt; otherHIS1
+    CDX &lt;--&gt; otherHIS2
+    CDX &lt;--&gt; otherHIS3
+    CDX &lt;--&gt; otherHIS4
+    CDX &lt;--&gt; otherHIS5
+</code></pre>
+
+<p>The server side of OBIB is implemented based on the interoperability engine <a href="http://wiki.patesco.ca/doku.php?id=hl7:mirth:tutorial">Mirth Connect</a>. Mirth Connect channels transform messages received from the OSCAR to CDA messages and send those messages to CDX through Web Services.</p>
+
+<p>The OBIB depends on a series of software platforms, namely Mirth Connect, Java, MySQL/MariaDB, OpenSSL and NGINX. Thus, to simplify the OBIB installation, a production-ready Vagrant VM was created along with administrative scripts to manage the clinics within OBIB.</p>
+
+<h2 id="installing-the-vm-for-obib">Installing the VM for OBIB</h2>
+
+<p>The following steps create a Vagrant VM with OBIB ready for production.</p>
+
+<p>Uncompress the <strong>obib-&lt;version-number&gt;.zip</strong> file and enter in the extracted folder <strong>obib-&lt;version-number&gt;/</strong>.</p>
+
+
+<div class="notices note" ><p>The deployment file can be generated with  <code>mvn deploy</code>, which will generate <strong>obib-&lt;version-number&gt;.zip</strong> in the <em>/OBIB/target/</em> sub-directory.
+For development it is recommended to start the Vagrant VM directly from the source folder, e.g., <strong>&lt;dev-workspace&gt;/OBIB/mirthchannels/OBIB_vm</strong>. Thus, any change to the scripts will be immediately available for the VM.</p>
+</div>
+
+
+<p>Change the configurations in <strong>Vagrantfile</strong> and <strong>mirth_connect.sh</strong> as needed. Most settings are within mirth_connect.sh only, except for the VM IP address which is located in both files.</p>
+
+<pre><code># VM IP address in Vagrantfile:
+config.vm.network &quot;private_network&quot;, ip: &quot;192.168.100.101&quot;
+
+# Mirth Connect (VM) IP address in mirth_connect.sh:
+SERVER_IP='192.168.100.101'
+</code></pre>
+
+
+<div class="notices info" ><p>OBIB uses a digital certificate as to sign the server and clients certificates, which are used for SSL authentication. It is recommended to generate a new self-signed digital certificate for production, or use a certificate provided by a Certificate Authority (CA). To generate a new self-signed certificate for OBIB use the script <code>gen_obib_certs.sh</code>. If a CA-signed certificate is used, both private and public key must be copied to the subdirectory <code>/configs/ssl</code>.</p>
+</div>
+
+
+<p>Start the new Vagrant VM with the environment installed and configured execute the following command:</p>
+
+<pre><code>$ vagrant up
+</code></pre>
+
+<p>Then, restart the VM to ensure all services are starting at boot time:</p>
+
+<pre><code>$ vagrant reload
+</code></pre>
+
+<h2 id="deploy-the-obib-channels-automatically">Deploy the OBIB Channels (automatically)</h2>
+
+<p>To deploy a new OBIB or redeploy an update of OBIB, execute the deploy provision from the folder where Vagrant VM is installed in, using the following command:</p>
+
+<pre><code>$ vagrant provision --provision-with deploy
+</code></pre>
+
+<p>*All operations should display <strong>Response code: 2XX</strong> in the console<em>. In case of error, all deployment operation returns are stored in the folder /home/vagrant/output in the VM.</em></p>
+
+<p>If the installations is successful, Mirth Connect and OBIB is available from the same IP configured previously. For example, the OBIB Connector address will be available at <a href="https://192.168.100.101">https://192.168.100.101</a> and Mirth Connector Administration at <a href="https://192.168.100.101:8443">https://192.168.100.101:8443</a> if the VM IP address is <em>192.168.100.101</em>.</p>
+
+
+<div class="notices note" ><p>The same command is used for updating the Mirth channels.</p>
+</div>
+
+
+<h2 id="deploy-the-obib-channels-manually">Deploy the OBIB Channels (manually)</h2>
+
+<p>This deployment option is executed using the <em>Mirth Connect Administrator</em>, available at <a href="https://www.nextgen.com/products-and-services/NextGen-Connect-Integration-Engine-Downloads">https://www.nextgen.com/products-and-services/NextGen-Connect-Integration-Engine-Downloads</a>.
+Also, the <em>Mirth Connect Administrator</em> is required for the development and maintenance of OBIB Channels, since the xmls generated by Mirth Connect are complex to maintain with a text editor.</p>
+
+<p>Login into the Mirth Connect Administrator</p>
+
+<p><img src="https://simbioses.github.io/cdxuserman/images/mirth_admin_launcher.png" alt="MirthConnect Admin - Launcher" /></p>
+
+<p>The address and credentials to access Mirth Connect using the Administrator are defined in the mirth_connect.sh file, used during the Vagrant VM installation.</p>
+
+<p><img src="https://simbioses.github.io/cdxuserman/images/mirth_admin_login.png" alt="MirthConnect Admin - Login" /></p>
+
+<p>The two necessary files to deploy OBIB are: the <strong>OBIB_global_scripts.xml</strong>, which contains the Vagrant Global Scripts and <strong>OBIB_channel_group.xml</strong>, which contains the OBIB Channels and Template Codes.</p>
+
+<p>To import the Vagrant Global Scripts do:</p>
+
+<ol>
+<li>Click on <strong>Channels</strong> in Mirth Connect menus.</li>
+<li>Click on <strong>Edit Global Scripts</strong> in Channel Tasks menus.</li>
+<li>Click on <strong>Import Scripts</strong> in Script Tasks menus.</li>
+<li>Select the <strong>OBIB_global_scripts.xml</strong> file from <em>/mirthchannels/OBIB_vm/configs/obib/</em> folder.</li>
+<li>Click on <strong>Save Scripts</strong> in Script Tasks menus.</li>
+</ol>
+
+<p><img src="https://simbioses.github.io/cdxuserman/images/mirth_admin_global_scripts.png" alt="MirthConnect Admin - Global Scripts" /></p>
+
+<p>To import the OBIB Channes and Template Codes do:</p>
+
+<ol>
+<li>Click on <strong>Channels</strong> in Mirth Connect menus.</li>
+<li>Click on <strong>Import Group</strong> in Group Tasks menu.</li>
+<li>Select the <strong>OBIB_channel_group.xml</strong> file from <em>/mirthchannels/OBIB_vm/configs/obib/</em> folder.</li>
+<li>Answer <strong>Yes</strong> to import the Code Template Libraries at same time.</li>
+</ol>
+
+<p><img src="https://simbioses.github.io/cdxuserman/images/mirth_admin_channels.png" alt="MirthConnect Admin - Channels" /></p>
+
+<p>After the previous steps, OBIB is ready to deploy within Mirht Connect. This is done by selecting the <strong>OBIB</strong> group on main screen and clickin on <strong>Redeploy all</strong> in the Channel Tasks menus.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="https://simbioses.github.io/cdxuserman/030_installation/" title="For OSPs"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="https://simbioses.github.io/cdxuserman/030_installation/clinic_registration/" title="Clinic Registration" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://simbioses.github.io/cdxuserman/js/clipboard.min.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/perfect-scrollbar.min.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/perfect-scrollbar.jquery.min.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/jquery.sticky.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/featherlight.min.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/html5shiv-printshiv.min.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/highlight.pack.js?1610063419"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://simbioses.github.io/cdxuserman/js/modernizr.custom-3.6.0.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/learn.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/hugo-learn.js?1610063419"></script>
+
+    <link href="https://simbioses.github.io/cdxuserman/mermaid/mermaid.css?1610063419" rel="stylesheet" />
+    <script src="https://simbioses.github.io/cdxuserman/mermaid/mermaid.js?1610063419"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

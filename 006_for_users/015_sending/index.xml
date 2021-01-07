@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bidirectional Workflows: e-Referrals on OSCAR CDX Interoperability User Manual</title>
+    <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/</link>
+    <description>Recent content in Bidirectional Workflows: e-Referrals on OSCAR CDX Interoperability User Manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2019 11:37:29 -0700</lastBuildDate>
+    
+	<atom:link href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recipient Registry</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_19/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_19/</guid>
+      <description>The CDX infrastructure has a provider registry, which contains address information about all CDX-capable providers and clinics.
+OSCAR has traditionally kept its own database of specialists. The CDX extension of OSCAR allows users to query the CDX provider registry and add/edit CDX capable providers in OSCAR&amp;rsquo;s database.
+Adding new CDX-capable specialists The “Add Specialist” UI has been extended to add CDX-capable specialists (click the Add CDX-Enabled Specialist link at the top).</description>
+    </item>
+    
+    <item>
+      <title>Sending an e-Referral</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_20/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_20/</guid>
+      <description>E-referrals are created in the usual way (like normal “consultations”) . Of course, it is important to select a CDX-capable specialist as the “Consultant”. These specialists are clearly marked in the dropdown box with a “(CDX)” prefix to their names (see below). They are also at the top of the list of specialists.
+Some providers may work for more than one clinic. In this case, the user can select a specific clinic to direct the referral to.</description>
+    </item>
+    
+    <item>
+      <title>Checking the status of a Referral</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_21/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_21/</guid>
+      <description>The user can validate whether an e-referral was sent and delivered by viewing the left side bar of the e-referral. Sent documents are shown with the time and date they were sent to the CDX messaging system.
+  Checkmark shows that document was delivered to recipients   If a document has been sent to the CDX system but it has not been downloaded by the recipient clinic yet, OSCAR will show a cloud symbol instead of a check mark.</description>
+    </item>
+    
+    <item>
+      <title>Updating a Referral</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_22/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_22/</guid>
+      <description>The user can send updates of e-referrals simply by re-opening the consultation form, updating some information and pressing on Update &amp;amp; Send CDX e-Referral.
+  Referral form updated with additional information   The consultation form keeps track of all versions of a referral request that have been sent (and delivered).
+  Initial referral and later update   </description>
+    </item>
+    
+    <item>
+      <title>Receiving Responses</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_23/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_23/</guid>
+      <description>Responses received from a specialist (via CDX) will arrive in the receiver&amp;rsquo;s inbox (as described in the receiving chapter)
+However, they also show up on the consultation form under &amp;ldquo;Response Received&amp;rdquo; at the side bar.   Indication of a response received   </description>
+    </item>
+    
+  </channel>
+</rss>

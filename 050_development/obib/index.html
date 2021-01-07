@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="description" content="OSCAR CDX Interoperability Manual">
+<meta name="author" content="Jens Weber">
+
+    <link rel="icon" href="https://simbioses.github.io/cdxuserman/images/favicon.png" type="image/png">
+
+    <title>OBIB :: OSCAR CDX Interoperability User Manual</title>
+
+    
+    <link href="https://simbioses.github.io/cdxuserman/css/nucleus.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/fontawesome-all.min.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/hybrid.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/featherlight.min.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/perfect-scrollbar.min.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/auto-complete.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/atom-one-dark-reasonable.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/theme.css?1610063419" rel="stylesheet">
+    <link href="https://simbioses.github.io/cdxuserman/css/hugo-theme.css?1610063419" rel="stylesheet">
+    
+      <link href="https://simbioses.github.io/cdxuserman/css/theme-blue.css?1610063419" rel="stylesheet">
+    
+
+    <script src="https://simbioses.github.io/cdxuserman/js/jquery-3.3.1.min.js?1610063419"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/050_development/obib/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://simbioses.github.io/cdxuserman/">
+  <img src="https://simbioses.github.io/cdxuserman//images/layout/oscarcdxlogo.png">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://simbioses.github.io/cdxuserman/js/lunr.min.js?1610063419"></script>
+<script type="text/javascript" src="https://simbioses.github.io/cdxuserman/js/auto-complete.js?1610063419"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/simbioses.github.io\/cdxuserman\/";
+    
+</script>
+<script type="text/javascript" src="https://simbioses.github.io/cdxuserman/js/search.js?1610063419"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/003_introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/003_introduction/">
+          Introduction
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/" title="For Users" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/">
+          For Users
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/009_receiving/" title="Receiving" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/">
+          Receiving
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_06/" title="Routing to the Inbox" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_06/">
+        Routing to the Inbox
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_08/" title="Associating incoming documents with patients" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_08/">
+        Associating incoming documents with patients
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_09/" title="Information shown in Inbox view" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_09/">
+        Information shown in Inbox view
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_10/" title="Viewing and Acknowledging CDX Documents" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_10/">
+        Viewing and Acknowledging CDX Documents
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_11/" title="Demographic data consistency warning" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_11/">
+        Demographic data consistency warning
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_12/" title="Manually linking documents to existing patient demographics" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_12/">
+        Manually linking documents to existing patient demographics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_13/" title="Creating a new Demographic" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_13/">
+        Creating a new Demographic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_14/" title="Deleting a CDX Document that was received in error" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_14/">
+        Deleting a CDX Document that was received in error
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_15/" title="Viewing documents with different versions" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_15/">
+        Viewing documents with different versions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_16/" title="Related documents" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_16/">
+        Related documents
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/009_receiving/cdx_18/" title="Document status" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_18/">
+        Document status
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/012_chart/" title="Patient’s eChart" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/012_chart/">
+          Patient’s eChart
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/015_sending/" title="Bidirectional Workflows: e-Referrals" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/">
+          Bidirectional Workflows: e-Referrals
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/015_sending/cdx_19/" title="Recipient Registry" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_19/">
+        Recipient Registry
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/015_sending/cdx_20/" title="Sending an e-Referral" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_20/">
+        Sending an e-Referral
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/015_sending/cdx_21/" title="Checking the status of a Referral" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_21/">
+        Checking the status of a Referral
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/015_sending/cdx_22/" title="Updating a Referral" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_22/">
+        Updating a Referral
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/015_sending/cdx_23/" title="Receiving Responses" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_23/">
+        Receiving Responses
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/018_administration/" title="Administration" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/018_administration/">
+          Administration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/018_administration/cdx_03/" title="Configuration" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_03/">
+        Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/018_administration/cdx_04/" title="Manual Document Import" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_04/">
+        Manual Document Import
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/021_cdxcomposer/" title="CDX Composer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/">
+          CDX Composer
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/021_cdxcomposer/cdx_24_sending/" title="Sending" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_24_sending/">
+        Sending
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/021_cdxcomposer/cdx_25_history/" title="History" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_25_history/">
+        History
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/006_for_users/021_cdxcomposer/cdx_26_reply/" title="Receiving and Reply" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_26_reply/">
+        Receiving and Reply
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/006_for_users/024_safetynotificationsystem/" title="Safety Notification System" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/006_for_users/024_safetynotificationsystem/">
+          Safety Notification System
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/030_installation/" title="For OSPs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/030_installation/">
+          For OSPs
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/030_installation/obib_install/" title="OBIB Installation" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/030_installation/obib_install/">
+        OBIB Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/030_installation/clinic_registration/" title="Clinic Registration" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/030_installation/clinic_registration/">
+        Clinic Registration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/030_installation/oscar_install/" title="OSCAR Installation" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/030_installation/oscar_install/">
+        OSCAR Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/050_development/" title="For Developers" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="https://simbioses.github.io/cdxuserman/050_development/">
+          For Developers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/architecture/" title="Architecture" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/architecture/">
+        Architecture
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/datamodel/" title="Data Model" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/datamodel/">
+        Data Model
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/import/" title="Import" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/import/">
+        Import
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/inbox/" title="Inbox" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/inbox/">
+        Inbox
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/echart/" title="eChart" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/echart/">
+        eChart
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/referral/" title="Referral" class="dd-item ">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/referral/">
+        Referral
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/050_development/obib/" title="OBIB" class="dd-item active">
+        <a href="https://simbioses.github.io/cdxuserman/050_development/obib/">
+        OBIB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p> Last Updated: November 21, 2019 @ 12:50 -0700</p></br>
+<p>Generated with <a href="http://gohugo.io/">Hugo</a> using <a href="https://github.com/matcornic/hugo-theme-learn">Learn theme</a></p>
+<p>Copyright by <a href="http://www.leadlab.ca/">LEAD lab </a> </p>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/simbioses/cdxuserman/edit/src/content/050_development/obib.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://simbioses.github.io/cdxuserman/'>Home</a> > <a href='https://simbioses.github.io/cdxuserman/050_development/'>For Developers</a> > OBIB
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#obib-vm">OBIB VM</a>
+<ul>
+<li><a href="#configuration-files-and-scripts">Configuration Files and Scripts</a></li>
+</ul></li>
+<li><a href="#obib-service">OBIB Service</a>
+<ul>
+<li><a href="#channels">Channels</a>
+<ul>
+<li><a href="#obib-services">OBIB Services</a></li>
+<li><a href="#cda-document-parser">CDA Document Parser</a></li>
+<li><a href="#cda-registry-parser">CDA Registry Parser</a></li>
+<li><a href="#osp-support">OSP Support</a></li>
+<li><a href="#document-storage">Document Storage</a></li>
+</ul></li>
+<li><a href="#global-scripts">Global Scripts</a></li>
+<li><a href="#code-templates">Code Templates</a></li>
+<li><a href="#development-environment">Development Environment</a></li>
+</ul></li>
+<li><a href="#connectors-services-clients">Connectors (Services Clients)</a>
+<ul>
+<li><a href="#cdx-connector">CDX Connector</a>
+<ul>
+<li><a href="#code-structure">Code structure</a></li>
+<li><a href="#command-line-ws-client">Command line WS Client</a></li>
+</ul></li>
+<li><a href="#obib-connector">OBIB Connector</a>
+<ul>
+<li><a href="#code-structure-1">Code structure</a></li>
+<li><a href="#testing">Testing</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              OBIB
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>The <em>Oscar Bidirectional Interoperability Bus</em> (<strong>OBIB</strong>) provides a set of services to achieve interoperability between Oscar and CDX. These services are implemented through Mirth Connect channels and a couple of Web Services and RESTful clients. In addition, OBIB is embedeed in a Virtual Machine (VM) defined by Vagrant.</p>
+
+<h2 id="obib-vm">OBIB VM</h2>
+
+<p>The OBIB VM is an <em>Ubuntu 18.04</em> VM build and managed using <a href="https://www.vagrantup.com/">Vagrant</a>. When deployed, <strong>OBIB VM</strong> contains all software necessary to execute the OBIB services.</p>
+
+<h3 id="configuration-files-and-scripts">Configuration Files and Scripts</h3>
+
+<ul>
+<li><p><strong>Vagrantfile</strong> is the Vagrant definition file for the virtual machine and its configurations, such as memory, network type, IP address, forwarded ports, and shared folders.</p></li>
+
+<li><p><strong>mirth_connect.sh</strong> contains the configurations needed to install the software within the VM and deploy the OBIB Services.</p></li>
+
+<li><p><strong>install.sh</strong> is executed automatically during the VM installation and it is responsible for install and configure all software required by OBIB. When executed the script:</p>
+
+<ul>
+<li>Update the Operating System - <a href="http://releases.ubuntu.com/18.04/">Ubuntu</a>;</li>
+<li>Install the <a href="https://openjdk.java.net/">OpenJDK 8</a>, required by Mirth Connect;</li>
+<li>Install and configure the <a href="https://www.nginx.com/">Nginx</a>, that works as a reverse proxy and implements SSL/TLS;</li>
+<li>Install additional XML tools necessary by other scripts;</li>
+<li>Install and configure the <a href="https://mariadb.org/">MariaDB Server</a>, utilized by MirthConnect and OBIB;</li>
+<li>Install and configure the <a href="http://www.mirthcorp.com/community/wiki/display/mirth/Home">Mirth Connect</a></li>
+</ul></li>
+
+<li><p><strong>deploy.sh</strong> is executed as a <a href="https://www.vagrantup.com/docs/cli/provision.html">Vagrant provision</a> and it is responsible for deploy and update OBIB within Mirth Connect. <strong>deploy.sh</strong> updates the database by running the script <em>./dbscripts/OBIB_DB_update.sql</em>, updates the Mirth Connect&rsquo;s resources, global scripts, channels and code template libraries, and redeploy all Mirth Connect&rsquo;s channels.
+
+<div class="notices note" ><p>See the section <a href="https://simbioses.github.io/cdxuserman/030_installation/obib_install/#deploy-the-obib-channels-automatically">OBIB Installation</a> for instruction on how to run <strong>deploy.sh</strong>.</p>
+</div>
+</p></li>
+
+<li><p><strong>register.sh</strong> is an administrative script responsible for the clinics&rsquo; management (register, unregister, and verification).
+
+<div class="notices note" ><p>Instructions on how to use <strong>register.sh</strong> are in the section <a href="https://simbioses.github.io/cdxuserman/030_installation/clinic_registration/#2-registering-the-clinic-in-obib">Clinic Registration</a> of this manual.</p>
+</div>
+
+
+<div class="notices info" ><p>For security reasons, this script should be executed from within the VM.</p>
+</div>
+</p></li>
+
+<li><p><strong>gen_obib_certs.sh</strong> is a helper script that generates a self-signed SSL/TLS CA certificate for OBIB. This certificate is utilized to generate the clinics&rsquo; certificates, which are utilized by OBIB Connector to access the OBIB Services.
+
+<div class="notices info" ><p>For security reasons, this script should be executed from within the VM.</p>
+</div>
+</p></li>
+</ul>
+
+<h2 id="obib-service">OBIB Service</h2>
+
+<h3 id="channels">Channels</h3>
+
+<h4 id="obib-services">OBIB Services</h4>
+
+<p>This channel is responsible for:</p>
+
+<ul>
+<li>Receive JSON messages via a REST API, defined in the &ldquo;HTTP Listener&rdquo; <em>source connector</em>;</li>
+<li>Route the messages to the appropriate destination connector according to the REST path;</li>
+<li>Transform the JSON messages to CDA Documents;</li>
+<li>Send the HL7 messages to the CDX WebServices using the <strong>CDX Connector</strong> Java Library;</li>
+</ul>
+
+<p>As already mentioned, the <em>source connector</em> of the <strong>OBIB Services</strong> channel is an HTTP Listener that implements different services. These services are implemented by the Destination Set Filter <em>source connector</em> that routes the messages for the correct <em>destination connector</em> according to the <em>context path</em> of the HTTP request. Moreover, this channel has a couple of JavaScript <em>source connectors</em> to validate the Clinic&rsquo;s credentials and OBIB Connector version. Also, this HTTP Listener implements a custom HTTP authentication using the <strong>clinicId</strong> and <strong>password</strong> which are sent in the HTTP request header.</p>
+
+<p><strong>OBIB Services</strong> implements the following services using JavaScript Writer <em>destination connectors</em>.</p>
+
+<ul>
+<li><p><strong>Service Submit Document</strong> is responsible for creating and submit CDA Documents.</p>
+
+<ul>
+<li>It receives the messages in OBIB JSON format and converts them to CDX HLX using some JavaScript <em>transformers</em>.</li>
+<li>The transformed document is sent to CDX using the method <code>WSClientDocument.submitDocument()</code> from the <a href="#cdx-connector">CDXConnector library</a>.</li>
+<li>The CDX response is transformed into a JavaScript <em>Response Transformer</em> and is sent back to the OBIB client through the <code>responseMessage</code> variable. Also, the CDA Document is included in the OBIB response, both in JSON and XML formats after parsed by the <a href="#cda-document-parser">CDA Document Parser</a> channel.</li>
+<li>The metadata from both sent documents and responses from CDX are stored in the OBIB Database by <a href="#document-storage">Document Storage</a> channel.</li>
+</ul></li>
+
+<li><p><strong>Service List New Documents</strong> is responsible for listing/pooling new CDA documents for a specific clinic. It uses the method <code>WSClientDocument.listNewDocuments()</code> from the <a href="#cdx-connector">CDXConnector library</a>.</p>
+
+<ul>
+<li>The CDX response is transformed into a JavaScript <em>Response Transformer</em> and is sent back to the OBIB client through the <code>responseMessage</code> variable.</li>
+</ul></li>
+
+<li><p><strong>Service Search Documents</strong> is responsible for searching for documents by effective and event period, clinic id or document id. It uses the method <code>WSClientDocument.searchDocuments()</code> from the <a href="#cdx-connector">CDXConnector library</a>.</p>
+
+<ul>
+<li>The search parameters are mapped via Mapper <em>transformers</em>.</li>
+<li>The CDX response is transformed into a JavaScript <em>Response Transformer</em> and is sent back to the OBIB client through the <code>responseMessage</code> variable.</li>
+</ul></li>
+
+<li><p><strong>Service Get Document</strong> is responsible for getting a specific document by its id. It uses the method <code>WSClientDocument.getDocument()</code> from the <a href="#cdx-connector">CDXConnector library</a>.</p>
+
+<ul>
+<li>The query parameter is mapped via a Mapper <em>transformer</em>.</li>
+<li>The CDX response is transformed into a JavaScript <em>Response Transformer</em> and is sent back to the OBIB client through the <code>responseMessage</code> variable.</li>
+</ul></li>
+
+<li><p><strong>Service List Clinics</strong> is responsible for search/list clinics by clinic id, clinic name, and clinic address. It uses the method <code>WSClientClinic.listClinics()</code> from the <a href="#cdx-connector">CDXConnector library</a>.</p>
+
+<ul>
+<li>The search parameters are mapped via Mapper <em>transformers</em>.</li>
+<li>The CDX response is transformed into a JavaScript <em>Response Transformer</em> and is sent back to the OBIB client through the <code>responseMessage</code> variable. Moreover, the Clinic Registry is parsed by the <a href="#cda-registry-parser">CDA Registry Parser</a> channel.</li>
+</ul></li>
+
+<li><p><strong>Service List Providers</strong> is responsible for search/list providers by clinic id, provider id and provider name. It uses the method <code>WSClientProvider.listProviders()</code> from the <a href="#cdx-connector">CDXConnector library</a>.</p>
+
+<ul>
+<li>The search parameters are mapped via Mapper <em>transformers</em>.</li>
+<li>The CDX response is transformed into a JavaScript <em>Response Transformer</em> and is sent back to the OBIB client through the <code>responseMessage</code> variable. Moreover, the Provider Registry is parsed by the <a href="#cda-registry-parser">CDA Registry Parser</a> channel.</li>
+</ul></li>
+
+<li><p><strong>Service OSP Support</strong> is responsible for process (error) notifications from the OBIB clients using the <a href="#osp-support">OSP Support</a> channel.</p>
+
+<ul>
+<li>A JavaScript <em>transformer</em> encodes the message for the <a href="#osp-support">OSP Support</a> channel.</li>
+<li>A JavaScript <em>response transformer</em> generate a response for the OBIB client.</li>
+</ul></li>
+
+<li><p><strong>Service Distribution Status</strong> is responsible for searching/requesting the distribution status of a document from CDX. It uses the method <code>WSClientDocument.getDistributionStatus()</code> from the <a href="#cdx-connector">CDXConnector library</a>.</p>
+
+<ul>
+<li>The search/request parameters are mapped via Mapper <em>transformers</em>.</li>
+<li>The CDX response is transformed into a JavaScript <em>Response Transformer</em> and is sent back to the OBIB client through the <code>responseMessage</code> variable.</li>
+</ul></li>
+</ul>
+
+<h4 id="cda-document-parser">CDA Document Parser</h4>
+
+<p>This channel is responsible for converting CDA Documents (CDX HL7) to OBIB JSON Documents.</p>
+
+<p>Its <em>source connector</em> is a Channel Reader and it has only one <em>destination connector</em>, named <strong>Parse CDA Document</strong> which is a Javascript Writer. <strong>Parse CDA Document</strong> stores the transformed message (JSON) into the response map, and this message is afterwards returned by the <em>source connector</em>.</p>
+
+<p>The messages are transformed by the <strong>Parse CDA Document&rsquo;s</strong> <em>transformers</em>. Each transformer is responsible for transform a section of the document.</p>
+
+<h4 id="cda-registry-parser">CDA Registry Parser</h4>
+
+<p>This channel is responsible for converting the CDX XML registry messages (clinics and providers) into OBIB JSON messages.</p>
+
+<p>Its <em>source connector</em> is a Channel Reader and it has two <em>destination connectors</em>: <strong>Parse Clinic Registry</strong> and <strong>Parse Provider Registry</strong> which are Javascript Writers. Both connectors store the transformed message (JSON) into the response map, and this message is afterwards returned by the <em>source connector</em>.</p>
+
+<p>To select which <em>destination connector</em> is responsible for a message, the <em>source connector</em> has two <em>transformers</em> that act as Destination Set Filters that route the messages according to the value of <strong>//subject1/assignedEntity/code/@code</strong> of the XML.</p>
+
+<p><strong>Parse Clinic Registry</strong> transforms the Clinic Registry messages using three <em>transformers</em>. Also, it has a filter to get only messages in which the clinic is able to receive a specific document type (e-Referrals).</p>
+
+<p><strong>Parse Provider Registry</strong> transforms the Provider Registry messages using two <em>transformers</em>. It also has a filter to get only messages in which the clinic is able to receive a specific document type (e-Referrals).</p>
+
+<h4 id="osp-support">OSP Support</h4>
+
+<p>This channel is responsible for receive and store (error) messages, and forward them via email.</p>
+
+<p>Its <em>source connector</em> is a Channel Reader and to handle the messages <strong>OSP Support</strong> has two chained <em>destination connectors</em>, which are executed in sequence. The channels are:</p>
+
+<ul>
+<li><p><strong>Store Error Message</strong> is a Database Writer and it is responsible for persisting the message in the OBIB Database.</p></li>
+
+<li><p><strong>Send Notification Email</strong> is a SMTP Sender and it is responsible for sending the messages via e-mail for the registered recipients. To test this service, <a href="http://nilhcem.com/FakeSMTP/">FakeSMTP</a> is being used as a mock SMTP local server. It must be run separately, and the received emails are saved in files locally.</p></li>
+</ul>
+
+<h4 id="document-storage">Document Storage</h4>
+
+<p>This channel is responsible for storing the metadata of the documents sent to CDX and the metadata of the CDX responses in the OBIB database.</p>
+
+<p>Its <em>source connector</em> is a Channel Reader and it has three Database Writer <em>destination connectors</em> to store the different messages&rsquo; metadata: <strong>Store CDA Document</strong>, <strong>Store CDA Response</strong> and <strong>Store CDA Attachment</strong>.</p>
+
+<p>To select which <em>destination connector</em> is responsible for a message, the <em>source connector</em> has three <em>transformers</em> that act as Destination Set Filters that route the messages according to the type of the message (tag <strong>messageType</strong>).</p>
+
+<h3 id="global-scripts">Global Scripts</h3>
+
+<p>OBIB only utilizes the <em>Deploy</em> global script, that executes once for each deploys or redeploy task. This script loads information from the properties file, and the OBIB Database, and stores this information in the global map to be accessible by the channels.</p>
+
+<h3 id="code-templates">Code Templates</h3>
+
+<p>OBIB has a number of <em>code templates</em>, which are functions that can be used across multiple channels. These <em>code templates</em> are divided into two <em>code template libraries</em> just to organization purpose. The <strong>OBIB</strong> library contains general use scripts and the <strong>CDA</strong> library contains scripts to parse, format and build CDA message snippets.</p>
+
+<h3 id="development-environment">Development Environment</h3>
+
+<p>Since OBIB is implemented in Mirth Connect, the easiest way to maintain code is by using the <em>Mirth Connect Administrator</em>. To execute the <em>Mirth Connect Administrator</em> it is necessary download an <em>Administrator Launcher</em>, which is available in the Mirth Connect Launch Page (see figure below), or in the <a href="https://www.nextgen.com/products-and-services/nextgen-connect-integration-engine-downloads">Nextgen&rsquo;s download page</a>.</p>
+
+<figure>
+    <img src="https://simbioses.github.io/cdxuserman/images/mirth_connect_launch_page.png" width="50%"/> <figcaption>
+            <h4>Mirth Connect Launch Page</h4>
+        </figcaption>
+</figure>
+
+
+
+<div class="notices note" ><p>See the section <a href="https://simbioses.github.io/cdxuserman/030_installation/obib_install/#deploy-the-obib-channels-manually">OBIB Installation</a> for instruction on how to login into <strong>Mirth Connect Administrator</strong>.</p>
+</div>
+
+
+
+<div class="notices info" ><p>The easiest way to use <strong>Mirth Connect Administrator</strong> is download it from the Nextgen&rsquo;s download page and run it by calling the <code>./launcher</code> script.</p>
+</div>
+
+
+<h2 id="connectors-services-clients">Connectors (Services Clients)</h2>
+
+<h3 id="cdx-connector">CDX Connector</h3>
+
+<p>CDX Connector is a Java library responsible for connecting to CDX Web Services. Most of the code necessary to communicate with the Web Services is generated from the Web Services definitions using Maven plugins.</p>
+
+<p>The following plugins are utilized to automate the WS client code generation:</p>
+
+<ul>
+<li><a href="https://www.mojohaus.org/keytool/keytool-maven-plugin/">Keytool Maven Plugin</a>, import the CDX certificates into a PFX keystore which is utilized to download the WSDL from CDX.</li>
+<li><a href="https://github.com/dmn1k/wsdlget-maven-plugin">WSDLGet Maven Plugin</a>, download the WSDL files from CDX.</li>
+<li><a href="https://cxf.apache.org/docs/maven-cxf-codegen-plugin-wsdl-to-java.html">Apache CXF Maven Plugin</a>, generate java code from WSDL files.</li>
+</ul>
+
+<h4 id="code-structure">Code structure</h4>
+
+<p>The classes <strong>WSClientDocument.java</strong>, <strong>WSClientClinic.java</strong>, <strong>WSClientProvider.java</strong> contain the public methods that call the CDX WS methods.</p>
+
+<p>The package <strong>ca.uvic.leadlab.cdxconnector.messages</strong> contains builders and object factories to create WS messages.</p>
+
+<p>The folder <strong>src/main/resources/wsdl</strong> stores the WSDL and XSD files downloaded from CDX, and utilized to generate the WS client code.</p>
+
+
+<div class="notices info" ><p>Due to some limitations in the Apache CXF and incompatibilities with the CDX WS definitions, some &ldquo;hacks&rdquo; in the WSDL and XSD files were necessary to generate Java code. All &ldquo;hacks&rdquo; are commented with the tag <code>HACK:</code>.</p>
+</div>
+
+
+<h4 id="command-line-ws-client">Command line WS Client</h4>
+
+<p>When the CDX Connector jar file is generated, it also generates a <strong>jar-test</strong> that can be utilized for submitting CDA XML documents via the command line. See the CDX Connector <a href="https://github.com/simbioses/OBIB/tree/master/cdxconnector#submit-document-client">README.md</a> for more details.</p>
+
+<h3 id="obib-connector">OBIB Connector</h3>
+
+<p>OBIB Connector is a Java library responsible for connecting to OBIB REST services.</p>
+
+<h4 id="code-structure-1">Code structure</h4>
+
+<ul>
+<li><p>Package <strong>facades</strong> define fluent interfaces to submit and receive documents, look for registries (clinics and providers), and execute supportive operations in OBIB.</p></li>
+
+<li><p>Package <strong>impl</strong> implements the interfaces defined in <strong>facades</strong>.</p></li>
+
+<li><p>Package <strong>models</strong> define the class structure of the OBIB JSON Document. These classes are utilized to generate the JSON messages sent to the OBIB.</p></li>
+
+<li><p>Package <strong>rest</strong> implements the client methods for the OBIB REST services. The REST client utilizes the setting in the <strong>obibconnector.properties</strong> file to communicate with the OBIB.</p></li>
+</ul>
+
+<h4 id="testing">Testing</h4>
+
+
+<div class="notices info" ><p>The OBIB Connector tests connect to OBIB using SSL/TLS. Thus, when a new OBIB is deployed in the development environment it is necessary copy the new clinic keystore to the folder /certs in obibconnector and run the maven task &lsquo;package&rsquo;;</p>
+</div>
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="https://simbioses.github.io/cdxuserman/050_development/referral/" title="Referral"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="https://simbioses.github.io/cdxuserman/050_development/architecture/" title="Architecture" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://simbioses.github.io/cdxuserman/js/clipboard.min.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/perfect-scrollbar.min.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/perfect-scrollbar.jquery.min.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/jquery.sticky.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/featherlight.min.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/html5shiv-printshiv.min.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/highlight.pack.js?1610063419"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://simbioses.github.io/cdxuserman/js/modernizr.custom-3.6.0.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/learn.js?1610063419"></script>
+    <script src="https://simbioses.github.io/cdxuserman/js/hugo-learn.js?1610063419"></script>
+
+    <link href="https://simbioses.github.io/cdxuserman/mermaid/mermaid.css?1610063419" rel="stylesheet" />
+    <script src="https://simbioses.github.io/cdxuserman/mermaid/mermaid.js?1610063419"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

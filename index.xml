@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on OSCAR CDX Interoperability User Manual</title>
+    <link>https://simbioses.github.io/cdxuserman/</link>
+    <description>Recent content in Home on OSCAR CDX Interoperability User Manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Nov 2019 12:50:21 -0700</lastBuildDate>
+    
+	<atom:link href="https://simbioses.github.io/cdxuserman/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/architecture/</link>
+      <pubDate>Fri, 06 Sep 2019 17:47:51 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/architecture/</guid>
+      <description>The diagram below shows a component &amp;amp; connector view of the implemented architecture. OSCAR instances are connected to the CDX infrastructure via the Oscar Bidirectional Interoperability Bus (OBIB).
+The functionality required to interact with the OBIB is encapsulated in the OBIB Connector component which is made available as a Java archive (JAR). The OBIB connection is configured by means of two artifacts on the OSCAR server: an obibconnector properties file and an obibconnector keystore file (see deployment).</description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_03/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_03/</guid>
+      <description>The CDX systems needs to be connected to the OBIB (Oscar Bidirectional Interoperability Bus) exchange data. Users with role &amp;ldquo;admin&amp;rdquo; can check this in the CDX user interface in OSCAR&amp;rsquo;s Admin panel.
+ Admin → Integration → Clinical Data eXchange (CDX)
+ The CDX Status tab indicates whether OSCAR is connected with an OBIB.
+If the CDX Status tab indicates The OBIB is not connected, please contact your OSCAR Service Provider.</description>
+    </item>
+    
+    <item>
+      <title>OBIB Installation</title>
+      <link>https://simbioses.github.io/cdxuserman/030_installation/obib_install/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/030_installation/obib_install/</guid>
+      <description>OSCAR EMR instances connect to the CDX message distribution system via the Oscar Bidirectional Interoperability Bus (OBIB). An OBIB can support many OSCAR instances. Therefore, an OSP only needs to operate one OBIB.
+classDiagram OSCAR1 --&amp;gt; OBIB OSCAR2 --&amp;gt; OBIB OSCAR3 --&amp;gt; OBIB OSCAR4 --&amp;gt; OBIB OSCARn --&amp;gt; OBIB OBIB --&amp;gt; CDX CDX &amp;lt;--&amp;gt; otherHIS1 CDX &amp;lt;--&amp;gt; otherHIS2 CDX &amp;lt;--&amp;gt; otherHIS3 CDX &amp;lt;--&amp;gt; otherHIS4 CDX &amp;lt;--&amp;gt; otherHIS5  The server side of OBIB is implemented based on the interoperability engine Mirth Connect.</description>
+    </item>
+    
+    <item>
+      <title>Recipient Registry</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_19/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_19/</guid>
+      <description>The CDX infrastructure has a provider registry, which contains address information about all CDX-capable providers and clinics.
+OSCAR has traditionally kept its own database of specialists. The CDX extension of OSCAR allows users to query the CDX provider registry and add/edit CDX capable providers in OSCAR&amp;rsquo;s database.
+Adding new CDX-capable specialists The “Add Specialist” UI has been extended to add CDX-capable specialists (click the Add CDX-Enabled Specialist link at the top).</description>
+    </item>
+    
+    <item>
+      <title>Routing to the Inbox</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_06/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_06/</guid>
+      <description>CDX documents may identify several primary and secondary recipients (roughly analogous to the “To:” and “Cc:” fields in email.) CDX documents may also not specify any recipient provider - but just a recipient clinic.
+OSCAR’s CDX import engine uses the following logic to route incoming CDX documents to provider inboxes:
+ (Step 1) route the document to the Inbox of any provider with the same MSP number as any of the recipients named in the document.</description>
+    </item>
+    
+    <item>
+      <title>Sending</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_24_sending/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_24_sending/</guid>
+      <description>CDX Composer can be used to send different CDX documents like information request, progress note and patient summary from a single interface.
+  CDX Composer UI   Patient Patients can be directly searched by their first and last name and added to the document.
+Primary Recipient(s) and Secondary Recipient(s) The CDX infrastructure has a provider registry, which contains address information about all CDX-capable providers and clinics.
+Even though, OSCAR has traditionally kept its own database of specialists.</description>
+    </item>
+    
+    <item>
+      <title>Data Model</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/datamodel/</link>
+      <pubDate>Mon, 09 Sep 2019 10:30:57 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/datamodel/</guid>
+      <description>A decision was made to utilize the existing OSCAR workflows and UI elements as much as possible for CDX interoperability, so that users do not have to switch between different &amp;lsquo;tools&amp;rsquo; to handle documents from different sources (e.g., CDX, Excelleris, etc.).
+OSCAR has traditionally persisted documents as files in the file system and meta information about the documents in the database document table.
+In order to minimize the changes to OSCAR, the CDX extension also uses the document table for storing meta-information about received documents.</description>
+    </item>
+    
+    <item>
+      <title>Import</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/import/</link>
+      <pubDate>Mon, 09 Sep 2019 10:27:36 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/import/</guid>
+      <description>The automatic import of CDX documents is handled by an &amp;lsquo;OSCAR job&amp;rsquo; (see class CDXDownloadJob). The download job is configured using class CDXConfiguration. The UI for the CDX configuration is implemented as a Java Server Page cdxAdmin, which invokes a Struts-action CDXAdminAction.
+The actual import algorithm is implemented in class CDXImport. CDXDownloadJob calls its importNewDocs method.
+classDiagram OscarRunnable &amp;lt;|-- CDXDownloadJob CDXConfiguration --&amp;gt; CDXDownloadJob : &amp;lt;&amp;lt;create&amp;gt;&amp;gt; CDXConfiguration : savePolling() CDXAdminAction --&amp;gt; CDXConfiguration : savePolling(enabled, interval) CDXAdminAction : execute() cdxAdmin --&amp;gt; CDXAdminAction : struts-config.</description>
+    </item>
+    
+    <item>
+      <title>Clinic Registration</title>
+      <link>https://simbioses.github.io/cdxuserman/030_installation/clinic_registration/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/030_installation/clinic_registration/</guid>
+      <description>1. Generating the Clinic Certificate Generate the Clinic certificate as described in the “CDX Vendor Certificate Process.pdf” document (https://bccdx.ca/Documents/CDX%20Vendor%20Certificate%20Process.pdf)
+In Key Options select the option Mark keys as exportable.
+ After generate the Clinic certificate, export the certificate using the Internet Explorer by selecting the issued certificate and following the Certificate Export Wizard.
+When asked, select to export the private key, and select to include all certificates in the certification path if possible.</description>
+    </item>
+    
+    <item>
+      <title>Manual Document Import</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_04/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_04/</guid>
+      <description>The CDX Admin panel allows administrators to manually download documents from the CDX system.
+ The system should normally be configured for *automatic download*. Manual document download should be used only for testing, to recover documents that were inadvertently deleted by users, or to retry failed downloads.  Manual download of “new” documents The CDX document distribution system considers documents as “new”, if and only if they have not yet been downloaded from the CDX system.</description>
+    </item>
+    
+    <item>
+      <title>History</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_25_history/</link>
+      <pubDate>Sat, 15 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_25_history/</guid>
+      <description>History CDX Composer keeps track of all the Cdx documents sent through CDX Composer. &amp;gt; CDX Composer → History
+  CDX Composer History   Users can view the detailed sent document by clicking on the &amp;ldquo;View&amp;rdquo; button on the history page.
+  Sent document view    Documents sent through CDX Composer have also been logged and visible in the patient e-chart section as shown in the pic below.</description>
+    </item>
+    
+    <item>
+      <title>OSCAR Installation</title>
+      <link>https://simbioses.github.io/cdxuserman/030_installation/oscar_install/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/030_installation/oscar_install/</guid>
+      <description>OBIB Connector Credentials The Clinic Registration process creates two files obibconnector.properties and obibconnector.keystorethat need to be placed in $CATALINA_HOME on the OSCAR server. For example:
+$ sudo cp obibconnector.* $CATALINA_HOME/  Then, change the owner of the files to allow tomcat to read them, and change their permissions to secure them from unauthorized read/write.
+$ chown tomcat7 obibconnector.* $ chmod 400 obibconnector.*  OSCAR UI Properties It is recommended to set the following properties in the oscar.</description>
+    </item>
+    
+    <item>
+      <title>Sending an e-Referral</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_20/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_20/</guid>
+      <description>E-referrals are created in the usual way (like normal “consultations”) . Of course, it is important to select a CDX-capable specialist as the “Consultant”. These specialists are clearly marked in the dropdown box with a “(CDX)” prefix to their names (see below). They are also at the top of the list of specialists.
+Some providers may work for more than one clinic. In this case, the user can select a specific clinic to direct the referral to.</description>
+    </item>
+    
+    <item>
+      <title>Inbox</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/inbox/</link>
+      <pubDate>Mon, 09 Sep 2019 16:55:18 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/inbox/</guid>
+      <description>The queries for the Inbox results are implemented in InboxResultsDao.java. This class has been extended to return CDX documents in the inbox (see method populateDocumentResultsData).
+The Inbox is displayed by the Java Server Page Page.jsp, which was updated to list CDX documents and launch the CDX document viewing page (showCdxDocument.JSP) for these documents.
+The showCdxDocument.JSP page has special functions that allow users to route documents to different providers, link documents to patients, create new patient demographic records for new patients, delete documents etc.</description>
+    </item>
+    
+    <item>
+      <title>eChart</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/echart/</link>
+      <pubDate>Mon, 09 Sep 2019 16:55:18 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/echart/</guid>
+      <description>CDX documents appear in the patient encounter screen (eChart) under &amp;ldquo;Documents&amp;rdquo;. The code to display documents has been modified to use the showCdxDocumentArchive page if the document is from CDX.
+classDiagram EctDisplayDocsAction --&amp;gt; EDoc : isCDX() EctDisplayDocsAction --&amp;gt; showCdxDocumentArchive : &amp;lt;&amp;lt;link&amp;gt;&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>Receiving and Reply</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_26_reply/</link>
+      <pubDate>Sat, 15 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_26_reply/</guid>
+      <description>Receiving Responses received from a specialist (via CDX) will arrive in the receiver&amp;rsquo;s inbox (as described in the receiving chapter)   Inbox   Reply CDX Composer allows user to respond back or reply to the incoming or received documents. &amp;gt; Inbox → Specific Message → Reply
+Users can open any CDX document from the inbox to see a &amp;ldquo;Reply&amp;rdquo; button in the top right side as shown in the pic below.</description>
+    </item>
+    
+    <item>
+      <title>Associating incoming documents with patients</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_08/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_08/</guid>
+      <description>The CDX import engine attempts to automatically match incoming documents to patient demographic records in the EMR. This is done using 4-point matching as follows:
+ - last name - gender - health number - gender  Documents for which the above 4-point match fails are shown as “not assigned” in the Inbox view (see above).</description>
+    </item>
+    
+    <item>
+      <title>Checking the status of a Referral</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_21/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_21/</guid>
+      <description>The user can validate whether an e-referral was sent and delivered by viewing the left side bar of the e-referral. Sent documents are shown with the time and date they were sent to the CDX messaging system.
+  Checkmark shows that document was delivered to recipients   If a document has been sent to the CDX system but it has not been downloaded by the recipient clinic yet, OSCAR will show a cloud symbol instead of a check mark.</description>
+    </item>
+    
+    <item>
+      <title>Referral</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/referral/</link>
+      <pubDate>Mon, 09 Sep 2019 17:24:59 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/referral/</guid>
+      <description>The creation of e-Referrals (called &amp;ldquo;consultations&amp;rdquo; in OSCAR) is supported by the Java Server Pages (JSP) page ConsulationFormRequest.JSP. Received CDX documents are shown as possible attachments using the showCdxDocumentArchive JSP.
+The corresponding actions for sending CDX documents are implemented in EctConsultationRequestFormAction.java. Sent referral documents and received responses can be shown using showCdxDocumentArchive JSP.
+classDiagram ConsultationFormRequest --&amp;gt; EctConsultationRequestFormAction : struts-config.example ConsultationFormRequest : &amp;lt;&amp;lt;JSP&amp;gt;&amp;gt; ConsultationFormRequest --&amp;gt; showCdxDocumentArchive : &amp;lt;&amp;lt;link&amp;gt;&amp;gt; ConsultationFormRequest --&amp;gt; attachConsultation2 : &amp;lt;&amp;lt;link&amp;gt;&amp;gt; attachConsultation2 --&amp;gt; showCdxDocumentArchive : &amp;lt;&amp;lt;link&amp;gt;&amp;gt; EctConsultationRequestFormAction --&amp;gt; ISubmitDoc EctConsultationRequestFormAction : doCdxSend() ISubmitDoc : newDoc() ISubmitDoc : updateDoc()  CDX documents and their attachments can be attached to consultation requests.</description>
+    </item>
+    
+    <item>
+      <title>Updating a Referral</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_22/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_22/</guid>
+      <description>The user can send updates of e-referrals simply by re-opening the consultation form, updating some information and pressing on Update &amp;amp; Send CDX e-Referral.
+  Referral form updated with additional information   The consultation form keeps track of all versions of a referral request that have been sent (and delivered).
+  Initial referral and later update   </description>
+    </item>
+    
+    <item>
+      <title>OBIB</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/obib/</link>
+      <pubDate>Thu, 21 Nov 2019 12:50:21 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/obib/</guid>
+      <description>The Oscar Bidirectional Interoperability Bus (OBIB) provides a set of services to achieve interoperability between Oscar and CDX. These services are implemented through Mirth Connect channels and a couple of Web Services and RESTful clients. In addition, OBIB is embedeed in a Virtual Machine (VM) defined by Vagrant.
+OBIB VM The OBIB VM is an Ubuntu 18.04 VM build and managed using Vagrant. When deployed, OBIB VM contains all software necessary to execute the OBIB services.</description>
+    </item>
+    
+    <item>
+      <title>Receiving Responses</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_23/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/015_sending/cdx_23/</guid>
+      <description>Responses received from a specialist (via CDX) will arrive in the receiver&amp;rsquo;s inbox (as described in the receiving chapter)
+However, they also show up on the consultation form under &amp;ldquo;Response Received&amp;rdquo; at the side bar.   Indication of a response received   </description>
+    </item>
+    
+    <item>
+      <title>Information shown in Inbox view</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_09/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_09/</guid>
+      <description>Similar to other documents and labs, the Inbox shows patient name, number and gender. Result status is not currently shown.  (⚠️ if the CDX document is a lab result, the result status is NOT displayed in the Inbox view. Consequently, the colour is NOT changed to red for an abnormal result.)  The “Date of Test” column shows the Observation Date, followed by the time the document was authored (Authoring Date).</description>
+    </item>
+    
+    <item>
+      <title>Viewing and Acknowledging CDX Documents</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_10/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_10/</guid>
+      <description>As with other Inbox items, clicking on a CDX Document will open up a viewer window that shows the content of the document, including potential attachments (e.g., PDF documents, images, etc.). The CDX Document Viewer provides the familiar functionality of acknowledging a document, flagging / messaging other providers, etc. (see below).
+  CDX Document Viewer   </description>
+    </item>
+    
+    <item>
+      <title>Demographic data consistency warning</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_11/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_11/</guid>
+      <description>Even if the CDX Import Engine was able to positively match the patient named in the document with a demographic record in the EMR (using 4 point matching, see above), the Import Engine may alert the user about inconsistencies between the demographic data in the document and in the EMR (see below).
+The clinician may use this warning as a motivation to review and possibly update the patient demographic record.</description>
+    </item>
+    
+    <item>
+      <title>Manually linking documents to existing patient demographics</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_12/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_12/</guid>
+      <description>The CDX Viewer shows a warning if the Import Engine failed to automatically match the document to a patient demographic record using the 4-point matching (last name, DOB, sex, HIN). In this case, the user can manually search the EMR demographic records and link the document to a patient (see “Demographic Search” input and “Link” button below).</description>
+    </item>
+    
+    <item>
+      <title>Creating a new Demographic</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_13/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_13/</guid>
+      <description>If the CDX document refers to a new patient (i.e., a patient that does not have a demographic record in the EMR), the user can create a new Demographic Record based on the information provided in the CDX document (see “New” button”). The CDX Document will be linked automatically to this newly created Demographic record.</description>
+    </item>
+    
+    <item>
+      <title>Deleting a CDX Document that was received in error</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_14/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_14/</guid>
+      <description>Finally, the user may delete a CDX document that was received in error, e.g., if the patient named on the document is not (and will not be) a client of the clinic. (see “Delete” button) Note: Documents that were deleted in error can be restored by an Admin (see Administration chapter of this user manual.).</description>
+    </item>
+    
+    <item>
+      <title>Viewing documents with different versions</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_15/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_15/</guid>
+      <description> It is possible to receive different versions of the same logical document. These documents will appear as separate entries in the Inbox. The CDX Viewer alerts the user that different versions are available and whether the user views the most up-to-date version. The user can switch between different versions.
+Example viewing an outdated version of a document: Viewer indicating that user sees the latest version: </description>
+    </item>
+    
+    <item>
+      <title>Related documents</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_16/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_16/</guid>
+      <description>CDX documents may also be related in ways other than versioning:
+ a document may have a “parent document” documents may belong to the same “set of documents” a document may have been sent “in fulfillment of” another document (e.g., a consult not document may have been sent in fulfillment of an referral request document)  Any related CDX documents are displayed at the bottom of the CDX Viewer window:</description>
+    </item>
+    
+    <item>
+      <title>Document status</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_18/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/009_receiving/cdx_18/</guid>
+      <description>CDX documents have a document status (e.g., complete, preliminary, updated, aborted).
+The status of a document is indicated in the document viewer:
+  Indication of document status in document viewer   Document stati are also displayed in the Inbox list:
+  Indication of document status in Inbox   </description>
+    </item>
+    
+  </channel>
+</rss>

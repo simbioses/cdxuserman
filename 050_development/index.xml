@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>For Developers on OSCAR CDX Interoperability User Manual</title>
+    <link>https://simbioses.github.io/cdxuserman/050_development/</link>
+    <description>Recent content in For Developers on OSCAR CDX Interoperability User Manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2019 11:37:29 -0700</lastBuildDate>
+    
+	<atom:link href="https://simbioses.github.io/cdxuserman/050_development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/architecture/</link>
+      <pubDate>Fri, 06 Sep 2019 17:47:51 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/architecture/</guid>
+      <description>The diagram below shows a component &amp;amp; connector view of the implemented architecture. OSCAR instances are connected to the CDX infrastructure via the Oscar Bidirectional Interoperability Bus (OBIB).
+The functionality required to interact with the OBIB is encapsulated in the OBIB Connector component which is made available as a Java archive (JAR). The OBIB connection is configured by means of two artifacts on the OSCAR server: an obibconnector properties file and an obibconnector keystore file (see deployment).</description>
+    </item>
+    
+    <item>
+      <title>Data Model</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/datamodel/</link>
+      <pubDate>Mon, 09 Sep 2019 10:30:57 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/datamodel/</guid>
+      <description>A decision was made to utilize the existing OSCAR workflows and UI elements as much as possible for CDX interoperability, so that users do not have to switch between different &amp;lsquo;tools&amp;rsquo; to handle documents from different sources (e.g., CDX, Excelleris, etc.).
+OSCAR has traditionally persisted documents as files in the file system and meta information about the documents in the database document table.
+In order to minimize the changes to OSCAR, the CDX extension also uses the document table for storing meta-information about received documents.</description>
+    </item>
+    
+    <item>
+      <title>Import</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/import/</link>
+      <pubDate>Mon, 09 Sep 2019 10:27:36 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/import/</guid>
+      <description>The automatic import of CDX documents is handled by an &amp;lsquo;OSCAR job&amp;rsquo; (see class CDXDownloadJob). The download job is configured using class CDXConfiguration. The UI for the CDX configuration is implemented as a Java Server Page cdxAdmin, which invokes a Struts-action CDXAdminAction.
+The actual import algorithm is implemented in class CDXImport. CDXDownloadJob calls its importNewDocs method.
+classDiagram OscarRunnable &amp;lt;|-- CDXDownloadJob CDXConfiguration --&amp;gt; CDXDownloadJob : &amp;lt;&amp;lt;create&amp;gt;&amp;gt; CDXConfiguration : savePolling() CDXAdminAction --&amp;gt; CDXConfiguration : savePolling(enabled, interval) CDXAdminAction : execute() cdxAdmin --&amp;gt; CDXAdminAction : struts-config.</description>
+    </item>
+    
+    <item>
+      <title>Inbox</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/inbox/</link>
+      <pubDate>Mon, 09 Sep 2019 16:55:18 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/inbox/</guid>
+      <description>The queries for the Inbox results are implemented in InboxResultsDao.java. This class has been extended to return CDX documents in the inbox (see method populateDocumentResultsData).
+The Inbox is displayed by the Java Server Page Page.jsp, which was updated to list CDX documents and launch the CDX document viewing page (showCdxDocument.JSP) for these documents.
+The showCdxDocument.JSP page has special functions that allow users to route documents to different providers, link documents to patients, create new patient demographic records for new patients, delete documents etc.</description>
+    </item>
+    
+    <item>
+      <title>eChart</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/echart/</link>
+      <pubDate>Mon, 09 Sep 2019 16:55:18 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/echart/</guid>
+      <description>CDX documents appear in the patient encounter screen (eChart) under &amp;ldquo;Documents&amp;rdquo;. The code to display documents has been modified to use the showCdxDocumentArchive page if the document is from CDX.
+classDiagram EctDisplayDocsAction --&amp;gt; EDoc : isCDX() EctDisplayDocsAction --&amp;gt; showCdxDocumentArchive : &amp;lt;&amp;lt;link&amp;gt;&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>Referral</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/referral/</link>
+      <pubDate>Mon, 09 Sep 2019 17:24:59 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/referral/</guid>
+      <description>The creation of e-Referrals (called &amp;ldquo;consultations&amp;rdquo; in OSCAR) is supported by the Java Server Pages (JSP) page ConsulationFormRequest.JSP. Received CDX documents are shown as possible attachments using the showCdxDocumentArchive JSP.
+The corresponding actions for sending CDX documents are implemented in EctConsultationRequestFormAction.java. Sent referral documents and received responses can be shown using showCdxDocumentArchive JSP.
+classDiagram ConsultationFormRequest --&amp;gt; EctConsultationRequestFormAction : struts-config.example ConsultationFormRequest : &amp;lt;&amp;lt;JSP&amp;gt;&amp;gt; ConsultationFormRequest --&amp;gt; showCdxDocumentArchive : &amp;lt;&amp;lt;link&amp;gt;&amp;gt; ConsultationFormRequest --&amp;gt; attachConsultation2 : &amp;lt;&amp;lt;link&amp;gt;&amp;gt; attachConsultation2 --&amp;gt; showCdxDocumentArchive : &amp;lt;&amp;lt;link&amp;gt;&amp;gt; EctConsultationRequestFormAction --&amp;gt; ISubmitDoc EctConsultationRequestFormAction : doCdxSend() ISubmitDoc : newDoc() ISubmitDoc : updateDoc()  CDX documents and their attachments can be attached to consultation requests.</description>
+    </item>
+    
+    <item>
+      <title>OBIB</title>
+      <link>https://simbioses.github.io/cdxuserman/050_development/obib/</link>
+      <pubDate>Thu, 21 Nov 2019 12:50:21 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/050_development/obib/</guid>
+      <description>The Oscar Bidirectional Interoperability Bus (OBIB) provides a set of services to achieve interoperability between Oscar and CDX. These services are implemented through Mirth Connect channels and a couple of Web Services and RESTful clients. In addition, OBIB is embedeed in a Virtual Machine (VM) defined by Vagrant.
+OBIB VM The OBIB VM is an Ubuntu 18.04 VM build and managed using Vagrant. When deployed, OBIB VM contains all software necessary to execute the OBIB services.</description>
+    </item>
+    
+  </channel>
+</rss>

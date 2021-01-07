@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CDX Composer on OSCAR CDX Interoperability User Manual</title>
+    <link>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/</link>
+    <description>Recent content in CDX Composer on OSCAR CDX Interoperability User Manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2019 11:37:29 -0700</lastBuildDate>
+    
+	<atom:link href="https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sending</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_24_sending/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_24_sending/</guid>
+      <description>CDX Composer can be used to send different CDX documents like information request, progress note and patient summary from a single interface.
+  CDX Composer UI   Patient Patients can be directly searched by their first and last name and added to the document.
+Primary Recipient(s) and Secondary Recipient(s) The CDX infrastructure has a provider registry, which contains address information about all CDX-capable providers and clinics.
+Even though, OSCAR has traditionally kept its own database of specialists.</description>
+    </item>
+    
+    <item>
+      <title>History</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_25_history/</link>
+      <pubDate>Sat, 15 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_25_history/</guid>
+      <description>History CDX Composer keeps track of all the Cdx documents sent through CDX Composer. &amp;gt; CDX Composer → History
+  CDX Composer History   Users can view the detailed sent document by clicking on the &amp;ldquo;View&amp;rdquo; button on the history page.
+  Sent document view    Documents sent through CDX Composer have also been logged and visible in the patient e-chart section as shown in the pic below.</description>
+    </item>
+    
+    <item>
+      <title>Receiving and Reply</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_26_reply/</link>
+      <pubDate>Sat, 15 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/021_cdxcomposer/cdx_26_reply/</guid>
+      <description>Receiving Responses received from a specialist (via CDX) will arrive in the receiver&amp;rsquo;s inbox (as described in the receiving chapter)   Inbox   Reply CDX Composer allows user to respond back or reply to the incoming or received documents. &amp;gt; Inbox → Specific Message → Reply
+Users can open any CDX document from the inbox to see a &amp;ldquo;Reply&amp;rdquo; button in the top right side as shown in the pic below.</description>
+    </item>
+    
+  </channel>
+</rss>

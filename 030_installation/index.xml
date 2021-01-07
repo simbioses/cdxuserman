@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>For OSPs on OSCAR CDX Interoperability User Manual</title>
+    <link>https://simbioses.github.io/cdxuserman/030_installation/</link>
+    <description>Recent content in For OSPs on OSCAR CDX Interoperability User Manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2019 11:37:29 -0700</lastBuildDate>
+    
+	<atom:link href="https://simbioses.github.io/cdxuserman/030_installation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OBIB Installation</title>
+      <link>https://simbioses.github.io/cdxuserman/030_installation/obib_install/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/030_installation/obib_install/</guid>
+      <description>OSCAR EMR instances connect to the CDX message distribution system via the Oscar Bidirectional Interoperability Bus (OBIB). An OBIB can support many OSCAR instances. Therefore, an OSP only needs to operate one OBIB.
+classDiagram OSCAR1 --&amp;gt; OBIB OSCAR2 --&amp;gt; OBIB OSCAR3 --&amp;gt; OBIB OSCAR4 --&amp;gt; OBIB OSCARn --&amp;gt; OBIB OBIB --&amp;gt; CDX CDX &amp;lt;--&amp;gt; otherHIS1 CDX &amp;lt;--&amp;gt; otherHIS2 CDX &amp;lt;--&amp;gt; otherHIS3 CDX &amp;lt;--&amp;gt; otherHIS4 CDX &amp;lt;--&amp;gt; otherHIS5  The server side of OBIB is implemented based on the interoperability engine Mirth Connect.</description>
+    </item>
+    
+    <item>
+      <title>Clinic Registration</title>
+      <link>https://simbioses.github.io/cdxuserman/030_installation/clinic_registration/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/030_installation/clinic_registration/</guid>
+      <description>1. Generating the Clinic Certificate Generate the Clinic certificate as described in the “CDX Vendor Certificate Process.pdf” document (https://bccdx.ca/Documents/CDX%20Vendor%20Certificate%20Process.pdf)
+In Key Options select the option Mark keys as exportable.
+ After generate the Clinic certificate, export the certificate using the Internet Explorer by selecting the issued certificate and following the Certificate Export Wizard.
+When asked, select to export the private key, and select to include all certificates in the certification path if possible.</description>
+    </item>
+    
+    <item>
+      <title>OSCAR Installation</title>
+      <link>https://simbioses.github.io/cdxuserman/030_installation/oscar_install/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/030_installation/oscar_install/</guid>
+      <description>OBIB Connector Credentials The Clinic Registration process creates two files obibconnector.properties and obibconnector.keystorethat need to be placed in $CATALINA_HOME on the OSCAR server. For example:
+$ sudo cp obibconnector.* $CATALINA_HOME/  Then, change the owner of the files to allow tomcat to read them, and change their permissions to secure them from unauthorized read/write.
+$ chown tomcat7 obibconnector.* $ chmod 400 obibconnector.*  OSCAR UI Properties It is recommended to set the following properties in the oscar.</description>
+    </item>
+    
+  </channel>
+</rss>

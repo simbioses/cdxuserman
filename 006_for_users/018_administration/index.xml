@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Administration on OSCAR CDX Interoperability User Manual</title>
+    <link>https://simbioses.github.io/cdxuserman/006_for_users/018_administration/</link>
+    <description>Recent content in Administration on OSCAR CDX Interoperability User Manual</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2019 11:37:29 -0700</lastBuildDate>
+    
+	<atom:link href="https://simbioses.github.io/cdxuserman/006_for_users/018_administration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configuration</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_03/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_03/</guid>
+      <description>The CDX systems needs to be connected to the OBIB (Oscar Bidirectional Interoperability Bus) exchange data. Users with role &amp;ldquo;admin&amp;rdquo; can check this in the CDX user interface in OSCAR&amp;rsquo;s Admin panel.
+ Admin → Integration → Clinical Data eXchange (CDX)
+ The CDX Status tab indicates whether OSCAR is connected with an OBIB.
+If the CDX Status tab indicates The OBIB is not connected, please contact your OSCAR Service Provider.</description>
+    </item>
+    
+    <item>
+      <title>Manual Document Import</title>
+      <link>https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_04/</link>
+      <pubDate>Fri, 14 Jun 2019 11:37:29 -0700</pubDate>
+      
+      <guid>https://simbioses.github.io/cdxuserman/006_for_users/018_administration/cdx_04/</guid>
+      <description>The CDX Admin panel allows administrators to manually download documents from the CDX system.
+ The system should normally be configured for *automatic download*. Manual document download should be used only for testing, to recover documents that were inadvertently deleted by users, or to retry failed downloads.  Manual download of “new” documents The CDX document distribution system considers documents as “new”, if and only if they have not yet been downloaded from the CDX system.</description>
+    </item>
+    
+  </channel>
+</rss>
