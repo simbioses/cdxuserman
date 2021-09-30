@@ -113,4 +113,4 @@ To import the OBIB Channes and Template Codes do:
 
 ![MirthConnect Admin - Channels](/images/mirth_admin_channels.png)
 
-After the previous steps, OBIB is ready to deploy within Mirht Connect. This is done by selecting the **OBIB** group on main screen and clickin on **Redeploy all** in the Channel Tasks menus.
+After the previous steps, OBIB is ready to deploy within Mirth Connect. This is done by selecting the **OBIB** group on main screen and clicking on **Redeploy all** in the Channel Tasks menus.
