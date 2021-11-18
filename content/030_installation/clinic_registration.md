@@ -14,7 +14,7 @@ In Key Options select the option **Mark keys as exportable**.
 
 ![CDX Certificate Request - Mark keys as exportable](/images/clinic_registration_cert_1.png)
 
-After generate the Clinic certificate, export the certificate using the Internet Explorer by selecting the issued certificate and following the *Certificate Export Wizard*.
+After generating the Clinic certificate, export the certificate using Internet Explorer by selecting the issued certificate and following the *Certificate Export Wizard*.
 
 ![Internet Explorer - Exporting certificate](/images/clinic_registration_cert_2.png)
 
